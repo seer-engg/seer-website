@@ -3,19 +3,19 @@ import { AlertCircle, TrendingDown, FileX } from "lucide-react";
 const Problem = () => {
   const problems = [
     {
-      icon: AlertCircle,
-      title: "The Guesswork",
-      description: "Prompt engineering is often just poking the black box. No proof, just hope it works.",
-    },
-    {
       icon: TrendingDown,
       title: "The Drift",
-      description: "Agents work today but fail tomorrow. Without evals, you can't track regression.",
+      description: "LLMs are non-deterministic. A prompt that works today might fail tomorrow due to a minor model update.",
+    },
+    {
+      icon: AlertCircle,
+      title: "The Black Box",
+      description: "When an agent fails, you re-run it. You don't learn why it failed. You just hope it works next time.",
     },
     {
       icon: FileX,
-      title: "The Noise",
-      description: "Logs are unreadable. Reasoning is opaque. Debugging becomes archaeology.",
+      title: "The Amnesia",
+      description: "Agents don't learn from their mistakes. They repeat the same API errors in every single session.",
     },
   ];
 
@@ -25,7 +25,7 @@ const Problem = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">The Confidence Gap</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Dev without evals = Anxiety.
+            Why do your agents work in the demo but break in production?
           </p>
         </div>
 

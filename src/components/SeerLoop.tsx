@@ -43,9 +43,9 @@ const SeerLoop = () => {
     <section id="how-it-works" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">The Seer Loop</h2>
+          <h2 className="text-5xl font-bold mb-4">The Scientific Method</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A circular flow that brings scientific rigor to agent development.
+            Evals First. Code Second.
           </p>
         </div>
 
