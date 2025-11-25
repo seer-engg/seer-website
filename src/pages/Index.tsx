@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import Asymmetry from "@/components/Asymmetry";
 import SeerLoop from "@/components/SeerLoop";
 import Features from "@/components/Features";
 import MemoryBank from "@/components/MemoryBank";
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Problem />
+      <Asymmetry />
       <SeerLoop />
       <Features />
       <MemoryBank />

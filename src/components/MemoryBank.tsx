@@ -6,16 +6,18 @@ interface Memory {
   entities: string[];
   observation: string;
   activation: number;
+  source: string;
 }
 
 const MemoryBank = () => {
   const memories: Memory[] = [
     {
-      memory_id: "mem_1",
-      context: "tool_use.github",
-      entities: ["pr_create", "branch_protection"],
-      observation: "Cannot push directly to 'main'. Must create feature branch first.",
-      activation: 0.98,
+      memory_id: "mem_lock_1",
+      context: "asana.tickets",
+      entities: ["ticket_lock", "write_permission"],
+      observation: "Tickets may be locked. Always call 'check_lock_status' before 'update_ticket'.",
+      activation: 0.99,
+      source: "Run #442 (Failure)",
     },
     {
       memory_id: "mem_2",
@@ -23,13 +25,15 @@ const MemoryBank = () => {
       entities: ["asana_api", "retry_logic"],
       observation: "Asana API returns 429 on burst. Implement exponential backoff.",
       activation: 0.85,
+      source: "Run #387 (Failure)",
     },
     {
       memory_id: "mem_3",
-      context: "workflow.deploy",
-      entities: ["docker", "env_vars"],
-      observation: "Restart container after setting ENV variables for them to take effect.",
-      activation: 0.72,
+      context: "github.branches",
+      entities: ["pr_create", "branch_protection"],
+      observation: "Cannot push directly to 'main'. Must create feature branch first.",
+      activation: 0.78,
+      source: "Run #501 (Failure)",
     },
   ];
 
@@ -42,11 +46,22 @@ const MemoryBank = () => {
   return (
     <section className="py-20 px-6 bg-cream">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">The Memory Bank</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Most agents have a context window. Seer has a hippocampus.
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold mb-4">Stop Making the Same Mistake Twice</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            When Seer catches your agent failing, it injects that failure into long-term memory
           </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="p-6 border border-border rounded-lg bg-background">
+            <p className="text-muted-foreground leading-relaxed">
+              When Seer catches your agent failing in the sandbox (e.g., trying to write to a locked file), 
+              it doesn't just log it. It injects that failure into the agent's long-term memory stored in Neo4j. 
+              On the next run, the agent <span className="font-semibold text-foreground">'remembers'</span> to 
+              check file permissions first.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

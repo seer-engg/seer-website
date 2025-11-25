@@ -7,28 +7,28 @@ const SeerLoop = () => {
   const steps = [
     {
       icon: Target,
-      title: "Hypothesis",
-      description: "Human defines the expected behavior (The Eval)",
+      title: "Provision",
+      description: "Seer spins up Docker containers & mock API environments",
     },
     {
       icon: Zap,
-      title: "Act",
-      description: "Agent attempts the task",
+      title: "Execute",
+      description: "Your Agent runs freely (multi-turn) within the sandbox",
     },
     {
       icon: CheckSquare,
-      title: "Evaluate",
-      description: "Seer checks the output against the Hypothesis",
+      title: "Assert",
+      description: "Seer checks Environment State—not just chat logs",
     },
     {
       icon: Brain,
       title: "Reflect",
-      description: "If failed, the agent analyzes why and updates its memory",
+      description: "Failures are stored in long-term memory for next run",
     },
     {
       icon: RotateCw,
-      title: "Iterate",
-      description: "The loop repeats until success or max rounds",
+      title: "Teardown",
+      description: "The sandbox is wiped clean for the next eval",
     },
   ];
 
@@ -43,9 +43,9 @@ const SeerLoop = () => {
     <section id="how-it-works" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">The Scientific Method</h2>
+          <h2 className="text-5xl font-bold mb-4">Seer's Architecture</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Evals First. Code Second.
+            The Sandboxed Approach
           </p>
         </div>
 

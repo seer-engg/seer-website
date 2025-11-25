@@ -9,18 +9,18 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance tracking-tight">
-            Stop Building Agents on Hope.
+            The Hard Part of Evals is the Sandbox.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-8">
-            Seer is the first scientific framework for AI agent development. We replaced 'prompt engineering' with falsifiable hypotheses, rigorous testing, and self-reflection.
+            Evaluating a chatbot is easy. Evaluating an Agent that touches your database, GitHub, and Asana is hard. Seer automates the sandbox, the state provisioning, and the multi-turn verification.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Button size="lg" className="gap-2">
-              Get Started
+              Spin Up a Sandbox
               <ArrowRight className="w-4 h-4" />
             </Button>
             <Button size="lg" variant="outline">
-              Read the Manifesto
+              View Documentation
             </Button>
           </div>
         </div>

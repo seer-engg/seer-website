@@ -95,7 +95,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            Built with skepticism by Seer Engineering. All rights reserved.
+            Built for the skeptics at Seer Engineering. MIT License · Open Source
           </p>
         </div>
       </div>
