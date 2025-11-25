@@ -4,16 +4,16 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "Reflexion Engine",
+      title: "Reflexion Memory",
       description:
-        "Self-improving agents with structured memory. Mistakes are stored as lessons, not lost in the context window.",
+        "An agent that actually learns. Using our Reflexion engine, agents store observations in a Neo4j graph database. They recall past API errors, project constraints, and user preferences instantly.",
       color: "bg-beige",
     },
     {
       icon: GitBranch,
-      title: "Graph-Based State",
+      title: "Smart Tool Selection",
       description:
-        "Built on LangGraph. Visualize the reasoning path, not just the output. Every decision is traceable.",
+        "Agents shouldn't guess which tools to use. Seer's Tool Hub uses a 'Hub & Spoke' architecture to pull in dependencies automatically.",
       color: "bg-cream",
     },
     {
@@ -25,9 +25,9 @@ const Features = () => {
     },
     {
       icon: Database,
-      title: "Neo4j Memory",
+      title: "Graph-Based State",
       description:
-        "Long-term semantic storage for agent experiences. Build a knowledge graph of successes and failures.",
+        "Built on LangGraph. Visualize the reasoning path, not just the output. Every decision is traceable and auditable.",
       color: "bg-beige",
     },
   ];
