@@ -15,11 +15,11 @@ const Navbar = () => {
             <a href="#philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Philosophy
             </a>
-            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              How it Works
+            <a href="#asymmetry" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              The Asymmetry
             </a>
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Features
+            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Architecture
             </a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               <Github className="w-4 h-4" />

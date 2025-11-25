@@ -12,12 +12,15 @@ const Terminal = () => {
   const [visibleLogs, setVisibleLogs] = useState<number>(0);
 
   const logs: LogEntry[] = [
-    { timestamp: "10:42:01.152", agent: "EVAL_AGENT", level: "INFO", message: "Generating hypothesis for feature: 'Asana Sync'" },
-    { timestamp: "10:42:02.304", agent: "CODEX", level: "INFO", message: "Drafting implementation plan..." },
-    { timestamp: "10:42:05.881", agent: "CODEX", level: "ERROR", message: "AssertionError: Task not created in Asana." },
-    { timestamp: "10:42:06.102", agent: "REFLECTOR", level: "WARN", message: "Observation: API token was missing in headers." },
-    { timestamp: "10:42:07.445", agent: "CODEX", level: "INFO", message: "Patching 'sync_service.py' with auth headers..." },
-    { timestamp: "10:42:09.001", agent: "EVAL_AGENT", level: "SUCCESS", message: "Test Passed: Asana task verified." },
+    { timestamp: "00:01", agent: "ORCHESTRATOR", level: "INFO", message: "Spinning up Sandbox [Docker: Postgres + Redis]..." },
+    { timestamp: "00:04", agent: "EVAL_AGENT", level: "INFO", message: "Seeding Asana Mock State: 3 tickets, 1 user." },
+    { timestamp: "00:05", agent: "TARGET_AGENT", level: "INFO", message: "Action 1: Searching for 'sync bug' tickets..." },
+    { timestamp: "00:12", agent: "TARGET_AGENT", level: "INFO", message: "Action 5: Attempting to close Asana ticket #123..." },
+    { timestamp: "00:15", agent: "SANDBOX", level: "ERROR", message: "Error: Ticket #123 is locked by another user." },
+    { timestamp: "00:16", agent: "REFLECTOR", level: "WARN", message: "Analysis: Agent failed to check lock status before write." },
+    { timestamp: "00:18", agent: "TARGET_AGENT", level: "INFO", message: "Action 6 (Retry): Unlocking ticket #123..." },
+    { timestamp: "00:20", agent: "TARGET_AGENT", level: "INFO", message: "Action 7: Closing ticket #123..." },
+    { timestamp: "00:22", agent: "EVAL_AGENT", level: "SUCCESS", message: "Assertion: Check Asana State... SUCCESS. Ticket is 'closed'." },
   ];
 
   useEffect(() => {

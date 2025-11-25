@@ -3,9 +3,9 @@ const CodeExample = () => {
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Drop-in Scientific Rigor</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Python-native. Type-safe. Developer friendly.
+          <h2 className="text-5xl font-bold mb-4">Simple Python API</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Define multi-turn evals without the infrastructure headache
           </p>
         </div>
 
@@ -14,22 +14,26 @@ const CodeExample = () => {
             <div className="w-3 h-3 rounded-full bg-error" />
             <div className="w-3 h-3 rounded-full bg-warning" />
             <div className="w-3 h-3 rounded-full bg-success" />
-            <span className="ml-2 text-primary-foreground/60">quickstart.sh</span>
+            <span className="ml-2 text-primary-foreground/60">test_eval.py</span>
           </div>
           
           <pre className="text-primary-foreground/90 leading-relaxed">
-{`# 1. Install Seer
-pip install seer-ai
+{`# Seer Eval Definition
+from seer import Sandbox, Agent
 
-# 2. Define your objective
-seer run --goal "Fix the bug in auth_service.py"
+def test_github_sync():
+    # 1. The Hard Part (Automated)
+    with Sandbox() as env:
+        env.seed_github(repo="buggy-coder", pr_count=1)
+        env.seed_asana(tasks=[{"id": "123", "status": "open"}])
 
-# 3. Watch the Science happen
-# [Eval Agent] Generating test case...
-# [Codex] Implementing fix...
-# [Reflector] Test failed. Adjusting strategy...
-# [Codex] Retrying...
-# [Success] Test Passed. PR Created.`}
+        # 2. The Agent Run (Multi-turn)
+        agent = Agent(env)
+        agent.run("Sync PR #1 merge to Asana")
+
+        # 3. The Assertion (State-based)
+        assert env.asana.get_task("123").status == "closed"
+        assert env.github.get_pr(1).merged is True`}
           </pre>
         </div>
       </div>
