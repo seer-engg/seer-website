@@ -40,11 +40,11 @@ const SeerLoop = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="relative h-[400px] sm:h-[500px] flex items-center justify-center">
+          <div className="relative h-[500px] flex items-center justify-center overflow-hidden px-4">
             {/* Circular container for steps */}
-            <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px]">
+            <div className="relative w-[400px] h-[400px] scale-75 sm:scale-100">
               {/* Connecting circle */}
-              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <circle
                   cx="200"
                   cy="200"
@@ -118,24 +118,24 @@ const SeerLoop = () => {
                       left: `${x}px`,
                       top: `${y}px`,
                       transform: "translate(-50%, -50%)",
-                      width: "120px",
+                      width: "160px",
                     }}
                   >
                     <div
-                      className={`w-16 h-16 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mb-2 sm:mb-4 transition-all duration-700 ${
+                      className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-700 ${
                         isActive
                           ? "bg-primary text-primary-foreground scale-110 shadow-xl shadow-primary/20"
                           : "bg-muted text-muted-foreground"
                       }`}
                     >
-                      <Icon className="w-6 h-6 sm:w-10 sm:h-10" strokeWidth={1.5} />
+                      <Icon className="w-10 h-10" strokeWidth={1.5} />
                     </div>
-                    <h3 className={`font-semibold text-sm sm:text-base mb-1 sm:mb-2 transition-all duration-700 ${
+                    <h3 className={`font-semibold text-base mb-2 transition-all duration-700 ${
                       isActive ? "text-foreground scale-105" : "text-muted-foreground"
                     }`}>
                       {step.title}
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed hidden sm:block">
+                    <p className="text-xs text-muted-foreground leading-relaxed hidden sm:block">
                       {step.description}
                     </p>
                   </div>
@@ -145,10 +145,10 @@ const SeerLoop = () => {
               {/* Center label */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-xs sm:text-sm font-mono text-muted-foreground uppercase tracking-wider">
+                  <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
                     Continuous
                   </div>
-                  <div className="text-base sm:text-lg font-semibold text-foreground">
+                  <div className="text-lg font-semibold text-foreground">
                     Improvement
                   </div>
                 </div>
