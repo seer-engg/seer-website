@@ -39,12 +39,52 @@ const SeerLoop = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="relative h-[500px] flex items-center justify-center px-4">
+        {/* Mobile: Simple vertical layout */}
+        <div className="sm:hidden max-w-md mx-auto space-y-4">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            const isActive = index === activeStep;
+            
+            return (
+              <div
+                key={index}
+                className={`p-6 rounded-lg border-2 transition-all duration-700 ${
+                  isActive
+                    ? "bg-primary text-primary-foreground border-primary shadow-lg"
+                    : "bg-background text-foreground border-border"
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-700 ${
+                    isActive ? "bg-primary-foreground text-primary" : "bg-muted text-muted-foreground"
+                  }`}>
+                    <Icon className="w-8 h-8" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-1">{step.title}</h3>
+                    <p className="text-sm opacity-90">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          <div className="text-center pt-4">
+            <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
+              Continuous
+            </div>
+            <div className="text-lg font-semibold text-foreground">
+              Improvement
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Circular layout */}
+        <div className="hidden sm:block max-w-3xl mx-auto">
+          <div className="relative h-[500px] flex items-center justify-center">
             {/* Circular container for steps */}
-            <div className="relative w-full max-w-[400px] aspect-square">
+            <div className="relative w-[400px] h-[400px]">
               {/* Connecting circle */}
-              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <circle
                   cx="200"
                   cy="200"
@@ -118,24 +158,24 @@ const SeerLoop = () => {
                       left: `${x}px`,
                       top: `${y}px`,
                       transform: "translate(-50%, -50%)",
-                      width: "140px",
+                      width: "160px",
                     }}
                   >
                     <div
-                      className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mb-3 sm:mb-4 transition-all duration-700 ${
+                      className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-700 ${
                         isActive
                           ? "bg-primary text-primary-foreground scale-110 shadow-xl shadow-primary/20"
                           : "bg-muted text-muted-foreground"
                       }`}
                     >
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={1.5} />
+                      <Icon className="w-10 h-10" strokeWidth={1.5} />
                     </div>
-                    <h3 className={`font-semibold text-sm sm:text-base mb-1 sm:mb-2 transition-all duration-700 ${
+                    <h3 className={`font-semibold text-base mb-2 transition-all duration-700 ${
                       isActive ? "text-foreground scale-105" : "text-muted-foreground"
                     }`}>
                       {step.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed hidden sm:block">
+                    <p className="text-xs text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </div>
