@@ -31,8 +31,10 @@ const Navbar = () => {
             </a>
           </div>
           
-          <Button variant="outline" size="sm" className="hidden md:flex">
-            Get Started
+          <Button variant="outline" size="sm" className="hidden md:flex" asChild>
+            <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer">
+              Get Started
+            </a>
           </Button>
         </div>
       </div>
