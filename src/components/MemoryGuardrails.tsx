@@ -12,70 +12,76 @@ const MemoryGuardrails = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="p-8 border border-border rounded-lg bg-card">
-              <div className="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center mb-6">
-                <Key className="w-6 h-6 text-error" />
+          <div className="relative mb-16">
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-border/30" style={{ transform: 'translateY(-50%)' }} />
+            
+            <div className="grid md:grid-cols-3 gap-12 relative">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-error/10 mb-6">
+                  <Key className="w-7 h-7 text-error" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 uppercase tracking-wide text-xs text-muted-foreground">The Mistake</h3>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Agent uses a hardcoded API key in the code
+                </p>
+                <div className="inline-block font-mono text-xs text-foreground/70 px-3 py-1.5 bg-secondary/30">
+                  api_key = &quot;sk-proj-...&quot;
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">The Mistake</h3>
-              <p className="text-muted-foreground mb-4">
-                Agent uses a hardcoded API key in the code
-              </p>
-              <div className="font-mono text-xs bg-secondary/50 p-3 rounded">
-                api_key = &quot;sk-proj-...&quot;
-              </div>
-            </div>
 
-            <div className="p-8 border border-border rounded-lg bg-card">
-              <div className="w-12 h-12 rounded-full bg-warning/10 flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-warning" />
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-warning/10 mb-6">
+                  <Shield className="w-7 h-7 text-warning" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 uppercase tracking-wide text-xs text-muted-foreground">The Catch</h3>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Seer catches it, fails the run, injects memory
+                </p>
+                <div className="inline-block font-mono text-xs text-foreground/70 px-3 py-1.5 bg-secondary/30">
+                  MUST_USE_ENV_VARS
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">The Catch</h3>
-              <p className="text-muted-foreground mb-4">
-                Seer catches it, fails the run, injects memory
-              </p>
-              <div className="font-mono text-xs bg-secondary/50 p-3 rounded">
-                MUST_USE_ENV_VARS
-              </div>
-            </div>
 
-            <div className="p-8 border border-border rounded-lg bg-card">
-              <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-6">
-                <Lock className="w-6 h-6 text-success" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">The Guardrail</h3>
-              <p className="text-muted-foreground mb-4">
-                Agent will never make that mistake again
-              </p>
-              <div className="font-mono text-xs bg-secondary/50 p-3 rounded">
-                os.getenv(&quot;API_KEY&quot;)
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-success/10 mb-6">
+                  <Lock className="w-7 h-7 text-success" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-semibold mb-3 uppercase tracking-wide text-xs text-muted-foreground">The Guardrail</h3>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Agent will never make that mistake again
+                </p>
+                <div className="inline-block font-mono text-xs text-foreground/70 px-3 py-1.5 bg-secondary/30">
+                  os.getenv(&quot;API_KEY&quot;)
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="p-8 border-2 border-border rounded-lg bg-card">
-            <blockquote className="text-lg text-foreground leading-relaxed mb-4">
-              &quot;If your agent tries to use a hardcoded API key, Seer catches it, fails the run, 
-              and injects a <span className="font-mono text-sm">MUST_USE_ENV_VARS</span> memory.&quot;
-            </blockquote>
+          <div className="max-w-3xl mx-auto mb-16 border-l-4 border-primary/20 pl-8 py-2">
+            <p className="text-xl text-foreground leading-relaxed mb-4">
+              If your agent tries to use a hardcoded API key, Seer catches it, fails the run, 
+              and injects a <span className="font-mono text-base px-1.5 py-0.5 bg-secondary/50">MUST_USE_ENV_VARS</span> memory.
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               The agent will <span className="font-semibold text-foreground">never make that mistake again</span>. 
               This isn&apos;t just error handling—it&apos;s architectural learning that persists across all future runs.
             </p>
           </div>
 
-          <div className="mt-8 grid md:grid-cols-2 gap-6">
-            <div className="p-6 bg-secondary/30 rounded-lg border border-border">
-              <h4 className="font-semibold mb-2 text-sm uppercase tracking-wide text-muted-foreground">Traditional Retry</h4>
-              <p className="text-sm text-foreground">
-                Agent fails → You manually fix it → Agent might fail again tomorrow
-              </p>
-            </div>
-            <div className="p-6 bg-success/5 rounded-lg border border-success/20">
-              <h4 className="font-semibold mb-2 text-sm uppercase tracking-wide text-success">Seer Reflexion</h4>
-              <p className="text-sm text-foreground">
-                Agent fails → Memory injected → Agent learns permanently → Never fails that way again
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-muted-foreground">Traditional Retry</h4>
+                <p className="text-base text-foreground/70 leading-relaxed">
+                  Agent fails → You manually fix it → Agent might fail again tomorrow
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3 text-sm uppercase tracking-wider text-success">Seer Reflexion</h4>
+                <p className="text-base text-foreground leading-relaxed">
+                  Agent fails → Memory injected → Agent learns permanently → Never fails that way again
+                </p>
+              </div>
             </div>
           </div>
         </div>
