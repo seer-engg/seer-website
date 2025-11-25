@@ -39,12 +39,12 @@ const SeerLoop = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="relative h-[500px] flex items-center justify-center">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative h-[500px] flex items-center justify-center px-4">
             {/* Circular container for steps */}
-            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]">
+            <div className="relative w-full max-w-[400px] aspect-square">
               {/* Connecting circle */}
-              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
                 <circle
                   cx="200"
                   cy="200"
@@ -118,17 +118,17 @@ const SeerLoop = () => {
                       left: `${x}px`,
                       top: `${y}px`,
                       transform: "translate(-50%, -50%)",
-                      width: "120px",
+                      width: "140px",
                     }}
                   >
                     <div
-                      className={`w-16 h-16 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mb-2 sm:mb-4 transition-all duration-700 ${
+                      className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mb-3 sm:mb-4 transition-all duration-700 ${
                         isActive
                           ? "bg-primary text-primary-foreground scale-110 shadow-xl shadow-primary/20"
                           : "bg-muted text-muted-foreground"
                       }`}
                     >
-                      <Icon className="w-7 h-7 sm:w-10 sm:h-10" strokeWidth={1.5} />
+                      <Icon className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={1.5} />
                     </div>
                     <h3 className={`font-semibold text-sm sm:text-base mb-1 sm:mb-2 transition-all duration-700 ${
                       isActive ? "text-foreground scale-105" : "text-muted-foreground"
