@@ -50,68 +50,68 @@ const SeerLoop = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Connecting lines */}
-            <svg className="absolute inset-0 w-full h-full -z-10" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker
-                  id="arrowhead"
-                  markerWidth="10"
-                  markerHeight="10"
-                  refX="9"
-                  refY="3"
-                  orient="auto"
+          <div className="relative h-[600px] flex items-center justify-center">
+            {/* Circular container for steps */}
+            <div className="relative w-[500px] h-[500px]">
+              {/* Connecting circle */}
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <circle
+                  cx="250"
+                  cy="250"
+                  r="180"
+                  fill="none"
+                  stroke="hsl(var(--border))"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                />
+                {/* Animated dot moving along the circle */}
+                <circle
+                  cx={250 + 180 * Math.cos((activeStep * 360 / steps.length - 90) * Math.PI / 180)}
+                  cy={250 + 180 * Math.sin((activeStep * 360 / steps.length - 90) * Math.PI / 180)}
+                  r="6"
+                  fill="hsl(var(--primary))"
+                  className="transition-all duration-500"
                 >
-                  <polygon points="0 0, 10 3, 0 6" fill="hsl(var(--border))" />
-                </marker>
-              </defs>
-              {steps.map((_, index) => {
-                const nextIndex = (index + 1) % steps.length;
-                const angle1 = (index * 360) / steps.length - 90;
-                const angle2 = (nextIndex * 360) / steps.length - 90;
-                const radius = 180;
-                const centerX = 400;
-                const centerY = 300;
-
-                const x1 = centerX + radius * Math.cos((angle1 * Math.PI) / 180);
-                const y1 = centerY + radius * Math.sin((angle1 * Math.PI) / 180);
-                const x2 = centerX + radius * Math.cos((angle2 * Math.PI) / 180);
-                const y2 = centerY + radius * Math.sin((angle2 * Math.PI) / 180);
-
-                return (
-                  <line
-                    key={index}
-                    x1={x1}
-                    y1={y1}
-                    x2={x2}
-                    y2={y2}
-                    stroke="hsl(var(--border))"
-                    strokeWidth="2"
-                    markerEnd="url(#arrowhead)"
-                    className="hidden md:block"
+                  <animate
+                    attributeName="opacity"
+                    values="1;0.5;1"
+                    dur="1s"
+                    repeatCount="indefinite"
                   />
-                );
-              })}
-            </svg>
+                </circle>
+              </svg>
 
-            <div className="grid md:grid-cols-5 gap-4 md:gap-0">
+              {/* Steps positioned in a circle */}
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 const isActive = index === activeStep;
+                const angle = (index * 360) / steps.length - 90; // Start at top
+                const radius = 180;
+                const x = 250 + radius * Math.cos((angle * Math.PI) / 180);
+                const y = 250 + radius * Math.sin((angle * Math.PI) / 180);
 
                 return (
-                  <div key={index} className="flex flex-col items-center text-center">
+                  <div
+                    key={index}
+                    className="absolute flex flex-col items-center text-center"
+                    style={{
+                      left: `${x}px`,
+                      top: `${y}px`,
+                      transform: "translate(-50%, -50%)",
+                      width: "140px",
+                    }}
+                  >
                     <div
-                      className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-500 ${
+                      className={`w-20 h-20 rounded-full flex items-center justify-center mb-3 transition-all duration-500 ${
                         isActive
                           ? "bg-primary text-primary-foreground scale-110 shadow-lg"
                           : "bg-secondary text-secondary-foreground"
                       }`}
                     >
-                      <Icon className="w-10 h-10" strokeWidth={1.5} />
+                      <Icon className="w-8 h-8" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground max-w-[200px]">
+                    <h3 className="font-semibold text-sm mb-1">{step.title}</h3>
+                    <p className="text-xs text-muted-foreground">
                       {step.description}
                     </p>
                   </div>
