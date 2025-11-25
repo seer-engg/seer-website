@@ -21,6 +21,9 @@ const Navbar = () => {
             <a href="/memory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Memory
             </a>
+            <a href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </a>
             <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               <Github className="w-4 h-4" />
               Seer
