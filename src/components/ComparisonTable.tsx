@@ -67,7 +67,7 @@ const ComparisonTable = () => {
             <thead>
               <tr className="border-b-2 border-border">
                 <th className="text-left p-4 font-semibold text-lg">Feature</th>
-                <th className="text-left p-4 font-semibold text-lg">Traditional Evals<br/><span className="text-sm font-normal text-muted-foreground">(LangSmith/Arize)</span></th>
+                <th className="text-left p-4 font-semibold text-lg">Traditional Evals</th>
                 <th className="text-left p-4 font-semibold text-lg bg-secondary/30">Seer Sandbox</th>
               </tr>
             </thead>

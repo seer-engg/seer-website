@@ -7,14 +7,14 @@ const Problem = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">Single-Shot vs. Reality</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Why LangSmith isn't enough for Agents.
+            Why existing tools aren't enough for Agents.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto mb-12">
           <div className="p-8 border border-border rounded-lg bg-background">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tools like Braintrust or Arize are great for optimizing a single prompt. 
+              Tools like Braintrust, Arize, and LangSmith are great for optimizing a single prompt. 
               But your agent isn't a single prompt. It's a 20-step loop that reads files, 
               makes API calls, and changes state.
             </p>

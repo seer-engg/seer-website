@@ -12,18 +12,22 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            <a href="#philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Home
+            </a>
+            <a href="/philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Philosophy
             </a>
-            <a href="#asymmetry" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              The Asymmetry
+            <a href="/memory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Memory
             </a>
-            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Architecture
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+            <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               <Github className="w-4 h-4" />
-              GitHub
+              Seer
+            </a>
+            <a href="https://github.com/seer-engg/reflexion" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+              <Github className="w-4 h-4" />
+              Reflexion
             </a>
           </div>
           
