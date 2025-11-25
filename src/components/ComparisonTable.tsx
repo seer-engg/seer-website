@@ -1,59 +1,47 @@
 import { Check, X } from "lucide-react";
-
 const ComparisonTable = () => {
-  const comparisons = [
-    {
-      feature: "Scope",
-      traditional: "Single-Shot Request/Response",
-      seer: "Multi-Turn Conversations (10+ steps)",
-      seerWins: true,
-    },
-    {
-      feature: "Verification",
-      traditional: "Regex / LLM-as-a-Judge on Text",
-      seer: "State Assertion on Environment",
-      seerWins: true,
-    },
-    {
-      feature: "Context",
-      traditional: "Stateless",
-      seer: "Stateful (Memory, Files, DB)",
-      seerWins: true,
-    },
-    {
-      feature: "Hard Part",
-      traditional: "Writing the Prompt",
-      seer: "Provisioning the Environment (Automated)",
-      seerWins: true,
-    },
-    {
-      feature: "State Reset",
-      traditional: "Manual (or ignored)",
-      seer: "Automated (Docker/Containers)",
-      seerWins: true,
-    },
-    {
-      feature: "Mocking",
-      traditional: "Static HTTP responses",
-      seer: "Dynamic Interactive Mocks",
-      seerWins: true,
-    },
-    {
-      feature: "Memory",
-      traditional: "None (Clean slate every time)",
-      seer: "Persistent (Reflexion Graph)",
-      seerWins: true,
-    },
-    {
-      feature: "Evolution",
-      traditional: "Static Test Cases",
-      seer: "Genetic Mutation (Fuzzing)",
-      seerWins: true,
-    },
-  ];
-
-  return (
-    <section className="py-20 px-6">
+  const comparisons = [{
+    feature: "Scope",
+    traditional: "Single-Shot Request/Response",
+    seer: "Multi-Turn Conversations (10+ steps)",
+    seerWins: true
+  }, {
+    feature: "Verification",
+    traditional: "Regex / LLM-as-a-Judge on Text",
+    seer: "State Assertion on Environment",
+    seerWins: true
+  }, {
+    feature: "Context",
+    traditional: "Stateless",
+    seer: "Stateful (Memory, Files, DB)",
+    seerWins: true
+  }, {
+    feature: "Hard Part",
+    traditional: "Writing the Prompt",
+    seer: "Provisioning the Environment (Automated)",
+    seerWins: true
+  }, {
+    feature: "State Reset",
+    traditional: "Manual (or ignored)",
+    seer: "Automated (Docker/Containers)",
+    seerWins: true
+  }, {
+    feature: "Mocking",
+    traditional: "Static HTTP responses",
+    seer: "Dynamic Interactive Mocks",
+    seerWins: true
+  }, {
+    feature: "Memory",
+    traditional: "None (Clean slate every time)",
+    seer: "Persistent (Reflexion Graph)",
+    seerWins: true
+  }, {
+    feature: "Evolution",
+    traditional: "Static Test Cases",
+    seer: "Genetic Mutation (Fuzzing)",
+    seerWins: true
+  }];
+  return <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">The Comparison</h2>
@@ -72,8 +60,7 @@ const ComparisonTable = () => {
               </tr>
             </thead>
             <tbody>
-              {comparisons.map((row, index) => (
-                <tr key={index} className="border-b border-border hover:bg-secondary/10 transition-colors">
+              {comparisons.map((row, index) => <tr key={index} className="border-b border-border hover:bg-secondary/10 transition-colors">
                   <td className="p-4 font-semibold">{row.feature}</td>
                   <td className="p-4 text-muted-foreground">
                     <div className="flex items-start gap-2">
@@ -87,20 +74,15 @@ const ComparisonTable = () => {
                       <span className="font-medium">{row.seer}</span>
                     </div>
                   </td>
-                </tr>
-              ))}
+                </tr>)}
             </tbody>
           </table>
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground font-mono">
-            The hard part isn&apos;t writing the eval. It&apos;s building the sandbox.
-          </p>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ComparisonTable;
