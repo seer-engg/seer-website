@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import InteractiveDemo from "@/components/InteractiveDemo";
 import ComparisonTable from "@/components/ComparisonTable";
 import SeerLoop from "@/components/SeerLoop";
-import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +13,6 @@ const Index = () => {
       <InteractiveDemo />
       <ComparisonTable />
       <SeerLoop />
-      <Features />
       <Footer />
     </div>
   );
