@@ -21,6 +21,12 @@ const Footer = () => {
             <Github className="w-6 h-6" />
           </a>
         </div>
+        
+        <div className="mt-8 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground text-center">
+            Built by skeptics at Seer Engineering. MIT License · Open Source
+          </p>
+        </div>
       </div>
     </footer>
   );

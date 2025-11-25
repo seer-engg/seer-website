@@ -11,18 +11,9 @@ const Hero = () => {
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance tracking-tight">
             Don't Build Agents on Hope.
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-8">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-12">
             Seer introduces a falsifiable, evidence-based workflow for multi-agent systems. Define your hypothesis, run the experiment, and watch your agents self-correct.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="gap-2">
-              Spin Up a Sandbox
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-            <Button size="lg" variant="outline">
-              View Documentation
-            </Button>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto animate-slide-up">
