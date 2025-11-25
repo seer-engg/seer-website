@@ -47,19 +47,30 @@ const Asymmetry = () => {
           </div>
         </div>
 
-        <div className="mt-12 max-w-4xl mx-auto p-8 border border-border rounded-lg bg-card">
-          <h4 className="text-xl font-semibold mb-4">The Core Belief</h4>
-          <p className="text-muted-foreground leading-relaxed">
-            We spoke to 50+ YC startups. Most are skeptical that an "Evals Product" can exist. 
-            They are right—if you think of evals as "checking if the LLM output contains a specific word."
-          </p>
-          <p className="text-muted-foreground leading-relaxed mt-4">
-            But for Agents, that doesn't matter. What matters is <span className="font-semibold text-foreground">State Change</span>.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mt-4">
-            Seer is built for the skeptics. We don't just check your prompt. We spin up a <span className="font-semibold text-foreground">Sandbox</span>, 
-            let your agent run for 20 turns, and verify the <span className="font-semibold text-foreground">outcome</span>.
-          </p>
+        <div className="mt-12 max-w-4xl mx-auto p-8 border-2 border-border rounded-lg bg-card">
+          <h4 className="text-2xl font-semibold mb-6">The Core Belief</h4>
+          <div className="space-y-4 text-lg">
+            <p className="text-muted-foreground leading-relaxed">
+              We spoke to 50+ YC startups. Most are skeptical that an &quot;Evals Product&quot; can exist. 
+              They are right—if you think of evals as &quot;checking if the LLM output contains a specific word.&quot;
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              But for Agents, that doesn&apos;t matter. What matters is <span className="font-semibold text-foreground text-xl">State Change</span>.
+            </p>
+            <div className="pl-6 border-l-4 border-primary/30 my-6">
+              <p className="text-foreground font-semibold leading-relaxed mb-2">
+                Here is our fundamental belief:
+              </p>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                <li><span className="font-semibold text-foreground">Dev without Evals = Hope.</span> You are shipping probabilistic code and praying it converges on the right answer.</li>
+                <li><span className="font-semibold text-foreground">Evals without Dev = Value.</span> Even if you never write another line of agent code, knowing exactly where your current agent fails (in a 10-step workflow) provides immediate architectural insight.</li>
+              </ol>
+            </div>
+            <p className="text-foreground font-semibold leading-relaxed">
+              Seer is built for the skeptics. We don&apos;t just check your prompt. We spin up a <span className="text-primary">Sandbox</span>, 
+              let your agent run for 20 turns, and verify the <span className="text-primary">outcome</span>.
+            </p>
+          </div>
         </div>
       </div>
     </section>

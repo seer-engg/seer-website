@@ -12,9 +12,10 @@ const Hero = () => {
             The Hard Part of Evals is the Sandbox.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-8">
-            Evaluating a chatbot is easy. Evaluating an Agent that touches your database, GitHub, and Asana is hard. Seer automates the sandbox, the state provisioning, and the multi-turn verification.
+            Evaluating a chatbot is easy. Evaluating an Agent that touches your database, GitHub, and Asana is hard. 
+            Seer automates the sandbox, the state provisioning, and the multi-turn verification.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="gap-2">
               Spin Up a Sandbox
               <ArrowRight className="w-4 h-4" />
