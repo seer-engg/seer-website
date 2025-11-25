@@ -116,9 +116,20 @@ const MemoryBank = () => {
           })}
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-sm font-mono text-muted-foreground">
-            class Memory(BaseModel): time: datetime | context: str | observation: str | activation: float
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="p-6 bg-primary text-primary-foreground rounded-lg font-mono text-xs">
+            <div className="flex items-center gap-2 mb-3 pb-2 border-b border-primary-foreground/20">
+              <span className="text-primary-foreground/60">memory_query.cypher</span>
+            </div>
+            <pre className="text-primary-foreground/90 leading-relaxed overflow-x-auto">
+{`MATCH (m:Memory)
+WHERE m.context STARTS WITH 'tool_correction.'
+RETURN m.time, m.context, m.observation
+ORDER BY m.time DESC LIMIT 1`}
+            </pre>
+          </div>
+          <p className="text-sm text-muted-foreground text-center mt-4">
+            Real graph technology. Query memories with Cypher, just like any other Neo4j database.
           </p>
         </div>
       </div>
