@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
+import InteractiveDemo from "@/components/InteractiveDemo";
 import ComparisonTable from "@/components/ComparisonTable";
 import SeerLoop from "@/components/SeerLoop";
 import Features from "@/components/Features";
@@ -11,7 +11,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Problem />
+      <InteractiveDemo />
       <ComparisonTable />
       <SeerLoop />
       <Features />
