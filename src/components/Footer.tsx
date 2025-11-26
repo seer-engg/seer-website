@@ -7,9 +7,7 @@ const Footer = () => {
         <div className="flex justify-between items-center">
           <div>
             <h3 className="font-mono font-semibold text-lg mb-2">Seer</h3>
-            <p className="text-sm text-muted-foreground">
-              The Scientific Method for AI Agent Development.
-            </p>
+            <p className="text-sm text-muted-foreground">The Scientific Method for AI Agent Development.</p>
           </div>
 
           <a
@@ -21,10 +19,10 @@ const Footer = () => {
             <Github className="w-6 h-6" />
           </a>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            Built by skeptics at Seer Engineering. MIT License · Open Source
+            Built for skeptics by Seer Engineering · Open Source
           </p>
         </div>
       </div>
