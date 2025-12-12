@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Eye, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,18 +13,18 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Home
-            </a>
-            <a href="/philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Philosophy
-            </a>
-            <a href="/memory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/memory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Memory
-            </a>
-            <a href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Pricing
-            </a>
+            </Link>
             <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
               <Github className="w-4 h-4" />
               Seer
@@ -34,11 +35,16 @@ const Navbar = () => {
             </a>
           </div>
           
-          <Button variant="outline" size="sm" className="hidden md:flex" asChild>
-            <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button size="sm" asChild>
+              <Link to="/demo">Book a demo</Link>
+            </Button>
+            <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
+              <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer">
+                Get Started
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

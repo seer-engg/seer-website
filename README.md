@@ -60,6 +60,27 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Book a demo (EmailJS)
+
+This site includes a **Book a demo** page at `"/demo"` with a minimal contact form (name + email).
+
+### Setup
+
+- **1) Install deps**
+  - Add `@emailjs/browser` (already added to `package.json` in this repo change)
+  - Run `npm i`
+
+- **2) Create env file**
+  - Copy `env.example` to `.env.local` and fill values:
+    - `VITE_EMAILJS_SERVICE_ID`
+    - `VITE_EMAILJS_TEMPLATE_ID`
+    - `VITE_EMAILJS_PUBLIC_KEY`
+
+- **3) Configure EmailJS template variables**
+  - The form sends:
+    - `from_name`
+    - `from_email`
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/efa104bb-8fd8-489e-914e-282a44f6b057) and click on Share -> Publish.
