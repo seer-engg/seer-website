@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Eye, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/images/logo.png";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Eye className="w-6 h-6" />
+            <img src={logo} alt="Seer logo" className="w-10 h-10" />
             <span className="text-xl font-mono font-semibold tracking-tight">Seer</span>
           </div>
           
