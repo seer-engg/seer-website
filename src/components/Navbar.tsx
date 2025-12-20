@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/images/logo.png";
+import { ExternalLink, Github } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -13,33 +13,20 @@ const Navbar = () => {
             <span className="text-xl font-mono font-semibold tracking-tight">Seer</span>
           </div>
           
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Home
-            </Link>
-            <Link to="/philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Philosophy
-            </Link>
-            <Link to="/memory" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Memory
-            </Link>
-            <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
-              <Github className="w-4 h-4" />
-              Seer
-            </a>
-            <a href="https://github.com/seer-engg/reflexion" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
-              <Github className="w-4 h-4" />
-              Reflexion
-            </a>
-          </div>
-          
           <div className="flex items-center gap-3">
             <Button size="sm" asChild>
               <Link to="/demo">Book a demo</Link>
             </Button>
             <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
               <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer">
-                Get Started
+                Github
+                <Github className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
+              <a href="https://app.getseer.dev" target="_blank" rel="noopener noreferrer">
+                Login
+                <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
           </div>

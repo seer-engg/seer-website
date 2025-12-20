@@ -35,7 +35,7 @@ const SeerLoop = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">Why Seer's Different</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Multi-turn, Stateful, Sandbox, Evaluation
+            Open-source, sandboxed, evals first.
           </p>
         </div>
 
@@ -68,14 +68,6 @@ const SeerLoop = () => {
               </div>
             );
           })}
-          <div className="text-center pt-4">
-            <div className="text-sm font-mono text-muted-foreground uppercase tracking-wider">
-              Continuous
-            </div>
-            <div className="text-lg font-semibold text-foreground">
-              Improvement
-            </div>
-          </div>
         </div>
 
         {/* Desktop: Circular layout */}
@@ -181,27 +173,15 @@ const SeerLoop = () => {
                   </div>
                 );
               })}
-
-              {/* Center label */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-xs sm:text-sm font-mono text-muted-foreground uppercase tracking-wider">
-                    Continuous
-                  </div>
-                  <div className="text-base sm:text-lg font-semibold text-foreground">
-                    Improvement
-                  </div>
-                </div>
-              </div>
-            </div>
+             </div>
           </div>
 
           {/* Key differentiator text */}
           <div className="mt-12 text-center max-w-2xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Unlike single-shot eval tools, Seer runs your agent through <span className="font-semibold text-foreground">multi-turn workflows</span> in 
-              isolated sandboxes, verifying <span className="font-semibold text-foreground">actual state changes</span>—not just text outputs—and 
-              learning from failures to prevent future mistakes.
+              How do you ensure your agent's not hallucinating? 
+              <br />
+              How's your agent learning from failures?
             </p>
           </div>
         </div>
