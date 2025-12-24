@@ -1,0 +1,9 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./scripts/agent/graph.ts:createGraph"
+  },
+  "node_version": "20",
+  "env": ".env"
+}
+

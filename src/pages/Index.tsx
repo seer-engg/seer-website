@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import InteractiveDemo from "@/components/InteractiveDemo";
-import ComparisonTable from "@/components/ComparisonTable";
+import HomeComparisonTable from "@/components/HomeComparisonTable";
 import SeerLoop from "@/components/SeerLoop";
 import Footer from "@/components/Footer";
 
@@ -12,7 +12,7 @@ const Index = () => {
       <Hero />
       <SeerLoop />
       <InteractiveDemo />
-      <ComparisonTable />
+      <HomeComparisonTable />
       <Footer />
     </div>
   );

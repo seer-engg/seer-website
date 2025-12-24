@@ -15,4 +15,15 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      external: [
+        // Exclude agent code from build
+        /^scripts\/agent/,
+        // Exclude LangChain dependencies (they're in devDependencies)
+        /^@langchain/,
+        /^langchain/,
+      ],
+    },
+  },
 }));

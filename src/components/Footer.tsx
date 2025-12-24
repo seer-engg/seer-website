@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,14 +14,14 @@ const Footer = () => {
             </p>
           </div>
 
-          <a
-            href="https://github.com/seer-engg/seer"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <Github className="w-6 h-6" />
-          </a>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/comparisons"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              App Comparisons
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
