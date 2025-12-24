@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, Plus, Trash2, CheckCircle2, XCircle, Loader2 } from "lucide-react";
+import { Play, Plus, Trash2, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { z } from "zod";
@@ -14,23 +14,23 @@ interface WorkflowStep {
   text: string;
 }
 
-interface SimulationResult {
+interface WorkflowPreview {
   step: number;
   text: string;
-  status: "success" | "fail";
-  error?: string;
+  status: "processing" | "complete";
+  message?: string;
   time: number;
 }
 
 const InteractiveDemo = () => {
   const [steps, setSteps] = useState<WorkflowStep[]>([
-    { id: "1", text: "Fetch open GitHub PRs" },
-    { id: "2", text: "Check PR approval status" },
-    { id: "3", text: "Sync approved PRs to Asana" },
+    { id: "1", text: "Fetch GitHub PRs" },
+    { id: "2", text: "Filter by status: merged" },
+    { id: "3", text: "Create Asana task for each PR" },
   ]);
   const [currentStep, setCurrentStep] = useState("");
   const [isRunning, setIsRunning] = useState(false);
-  const [results, setResults] = useState<SimulationResult[]>([]);
+  const [preview, setPreview] = useState<WorkflowPreview[]>([]);
 
   const addStep = () => {
     const trimmed = currentStep.trim();
@@ -65,78 +65,73 @@ const InteractiveDemo = () => {
     setSteps(steps.filter(step => step.id !== id));
   };
 
-  const simulateAnalysis = async () => {
+  const generateWorkflow = async () => {
     if (steps.length === 0) {
       toast.error("Add at least one workflow step");
       return;
     }
 
     setIsRunning(true);
-    setResults([]);
+    setPreview([]);
 
-    // Simulate sandbox setup
+    // Simulate workflow generation process
+    const previewSteps: WorkflowPreview[] = [];
+    
+    // Step 1: Analyzing requirements
     await new Promise(resolve => setTimeout(resolve, 800));
-    
-    const simulatedResults: SimulationResult[] = [];
-    
-    for (let i = 0; i < steps.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Simulate different failure scenarios based on keywords
-      const stepText = steps[i].text.toLowerCase();
-      let status: "success" | "fail" = "success";
-      let error: string | undefined;
+    previewSteps.push({
+      step: 0,
+      text: "Analyzing requirements...",
+      status: "processing",
+      time: Date.now(),
+    });
+    setPreview([...previewSteps]);
 
-      // Simulate realistic agent failures
-      if (stepText.includes("rate limit") || stepText.includes("api")) {
-        status = "fail";
-        error = "Rate limit exceeded. Agent didn't implement exponential backoff.";
-      } else if (stepText.includes("lock") || stepText.includes("concurrent")) {
-        status = "fail";
-        error = "Resource locked by another process. Agent didn't check lock status.";
-      } else if (stepText.includes("permission") || stepText.includes("auth")) {
-        status = "fail";
-        error = "Permission denied. Agent used hardcoded credentials instead of env vars.";
-      } else if (stepText.includes("branch") || stepText.includes("merge")) {
-        status = "fail";
-        error = "Branch protection rules violated. Agent attempted direct push to main.";
-      } else if (i > 5) {
-        // Add some randomness for later steps
-        status = Math.random() > 0.6 ? "fail" : "success";
-        if (status === "fail") {
-          error = "State assertion failed. Database record not created.";
-        }
-      }
+    // Step 2: Finding integrations
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    previewSteps[0].status = "complete";
+    previewSteps.push({
+      step: 1,
+      text: "Finding integrations...",
+      status: "processing",
+      time: Date.now(),
+    });
+    setPreview([...previewSteps]);
 
-      const result: SimulationResult = {
-        step: i + 1,
-        text: steps[i].text,
-        status,
-        error,
-        time: Date.now(),
-      };
+    // Step 3: Connecting blocks
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    previewSteps[1].status = "complete";
+    previewSteps.push({
+      step: 2,
+      text: "Connecting blocks...",
+      status: "processing",
+      time: Date.now(),
+    });
+    setPreview([...previewSteps]);
 
-      simulatedResults.push(result);
-      setResults([...simulatedResults]);
-    }
+    // Step 4: Workflow ready
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    previewSteps[2].status = "complete";
+    previewSteps.push({
+      step: 3,
+      text: "Workflow ready!",
+      status: "complete",
+      message: `Created workflow with ${steps.length} steps`,
+      time: Date.now(),
+    });
+    setPreview([...previewSteps]);
 
     setIsRunning(false);
-    
-    const failCount = simulatedResults.filter(r => r.status === "fail").length;
-    if (failCount > 0) {
-      toast.success(`Analysis complete! Found ${failCount} potential failure${failCount > 1 ? 's' : ''}`);
-    } else {
-      toast.success("Analysis complete! All steps passed");
-    }
+    toast.success("Workflow generated successfully!");
   };
 
   return (
     <section className="py-20 px-6 bg-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4">See Seer in Action</h2>
+          <h2 className="text-5xl font-bold mb-4">Build Your First Workflow</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Define your agent workflow below, then watch Seer analyze it for potential failures
+            Create a workflow step-by-step and see it come to life
           </p>
         </div>
 
@@ -144,7 +139,7 @@ const InteractiveDemo = () => {
           {/* Left: Input Panel */}
           <div>
             <div className="p-6 border border-border rounded-lg bg-background">
-              <h3 className="text-xl font-semibold mb-4">Your Agent Workflow</h3>
+              <h3 className="text-xl font-semibold mb-4">Workflow Steps</h3>
               
               <div className="space-y-3 mb-4">
                 {steps.map((step, index) => (
@@ -170,7 +165,7 @@ const InteractiveDemo = () => {
 
               <div className="flex gap-2 mb-4">
                 <Input
-                  placeholder="e.g., Check rate limits on API"
+                  placeholder="e.g., Send email notification"
                   value={currentStep}
                   onChange={(e) => setCurrentStep(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && addStep()}
@@ -188,116 +183,68 @@ const InteractiveDemo = () => {
               </div>
 
               <Button
-                onClick={simulateAnalysis}
+                onClick={generateWorkflow}
                 disabled={isRunning || steps.length === 0}
                 className="w-full gap-2"
               >
                 {isRunning ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Running Analysis...
+                    Generating Workflow...
                   </>
                 ) : (
                   <>
                     <Play className="w-4 h-4" />
-                    Run Seer Analysis
+                    Generate Workflow
                   </>
                 )}
               </Button>
-
-              <p className="text-xs text-muted-foreground mt-3 text-center">
-                Try keywords like "rate limit", "lock", "permission", or "branch"
-              </p>
             </div>
           </div>
 
-          {/* Right: Results Panel */}
+          {/* Right: Preview Panel */}
           <div>
             <div className="p-6 border border-border rounded-lg bg-background min-h-[400px]">
-              <h3 className="text-xl font-semibold mb-4">Seer Sandbox Results</h3>
+              <h3 className="text-xl font-semibold mb-4">Workflow Preview</h3>
               
-              {results.length === 0 && !isRunning && (
+              {preview.length === 0 && !isRunning && (
                 <div className="flex items-center justify-center h-64 text-muted-foreground">
                   <div className="text-center">
                     <Play className="w-12 h-12 mx-auto mb-3 opacity-20" />
-                    <p>Run an analysis to see results</p>
-                  </div>
-                </div>
-              )}
-
-              {isRunning && results.length === 0 && (
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Provisioning Docker sandbox...</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Seeding mock environment...</span>
+                    <p>Add steps to preview your workflow</p>
                   </div>
                 </div>
               )}
 
               <div className="space-y-2">
-                {results.map((result, index) => (
+                {preview.map((item, index) => (
                   <div
                     key={index}
                     className={`p-3 rounded border animate-fade-in ${
-                      result.status === "success"
+                      item.status === "complete"
                         ? "border-success/20 bg-success/5"
-                        : "border-error/20 bg-error/5"
+                        : "border-primary/20 bg-primary/5"
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-start gap-3">
-                      {result.status === "success" ? (
+                      {item.status === "complete" ? (
                         <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
                       ) : (
-                        <XCircle className="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                        <Loader2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 animate-spin" />
                       )}
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-mono text-muted-foreground">
-                            Step {result.step}
-                          </span>
-                          <span
-                            className={`text-xs font-semibold ${
-                              result.status === "success" ? "text-success" : "text-error"
-                            }`}
-                          >
-                            {result.status === "success" ? "PASS" : "FAIL"}
-                          </span>
-                        </div>
-                        <p className="text-sm text-foreground mb-1">{result.text}</p>
-                        {result.error && (
-                          <p className="text-xs text-error font-mono">{result.error}</p>
+                        <p className="text-sm text-foreground mb-1">{item.text}</p>
+                        {item.message && (
+                          <p className="text-xs text-muted-foreground">{item.message}</p>
                         )}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {results.length > 0 && !isRunning && (
-                <div className="mt-4 p-4 border-t border-border">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">
-                      {results.filter(r => r.status === "success").length} passed
-                    </span>
-                    <span className="text-muted-foreground">
-                      {results.filter(r => r.status === "fail").length} failed
-                    </span>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-sm text-muted-foreground font-mono">
-            This is a simulation. Real Seer runs in isolated Docker containers with actual state verification.
-          </p>
         </div>
       </div>
     </section>

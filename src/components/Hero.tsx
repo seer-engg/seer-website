@@ -7,10 +7,10 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto animate-slide-up">
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-left tracking-tight">
-              Don't Build Agents on Hope.
+              Build AI Workflows, Not Code.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-12">
-              Falsifiable, evidence-based workflow for agents.
+              Visual workflow builder with AI assistance. Self-hostable, fine-grained control, rich integrations.
             </p>
           </div>
           <Terminal />

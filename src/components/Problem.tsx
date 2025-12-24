@@ -5,22 +5,16 @@ const Problem = () => {
     <section id="philosophy" className="py-20 px-6 bg-cream">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">Single-Shot vs. Reality</h2>
+          <h2 className="text-5xl font-bold mb-4">The Workflow Building Challenge</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Why existing tools aren't enough for Agents.
+            Why existing platforms fall short for AI workflows.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto mb-12">
           <div className="p-8 border border-border rounded-lg bg-background">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tools like Braintrust, Arize, and LangSmith are great for optimizing a single prompt. 
-              But your agent isn't a single prompt. It's a 20-step loop that reads files, 
-              makes API calls, and changes state.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              Checking the <span className="font-mono text-foreground">text output</span> of step 20 tells you nothing about 
-              whether the database was actually updated in step 15. <span className="font-semibold text-foreground">You need a Sandbox.</span>
+              Tools like Make, n8n, and Zapier are great for simple automations. But AI workflows need fine-grained control, state management, and the ability to interrupt and resume. They need integrations that understand context, not just API calls.
             </p>
           </div>
         </div>
@@ -30,10 +24,9 @@ const Problem = () => {
             <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Single-Shot Scope</h3>
+            <h3 className="text-2xl font-semibold mb-4">Limited Control</h3>
             <p className="text-muted-foreground">
-              Traditional evals check one request/response pair. Real agents run 
-              for 10+ turns across multiple tools and state changes.
+              Most platforms hide complexity behind templates. Real workflows need fine-grained control over every step and decision point.
             </p>
           </div>
 
@@ -41,10 +34,9 @@ const Problem = () => {
             <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6">
               <TrendingDown className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Text Verification</h3>
+            <h3 className="text-2xl font-semibold mb-4">Integration Gaps</h3>
             <p className="text-muted-foreground">
-              Regex matching or LLM-as-Judge on text output doesn't tell you if 
-              the database record was created or the file was actually modified.
+              Generic API connectors don't understand your tools. AI workflows need integrations that know about GitHub PRs, Asana tasks, and Gmail threads.
             </p>
           </div>
 
@@ -52,10 +44,9 @@ const Problem = () => {
             <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6">
               <FileX className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Missing Context</h3>
+            <h3 className="text-2xl font-semibold mb-4">State Management</h3>
             <p className="text-muted-foreground">
-              The hard part isn't writing prompts—it's provisioning Docker containers, 
-              seeding databases, and mocking APIs. That's what Seer automates.
+              Workflows fail when state isn't managed. Seer handles persistence, resumability, and observability out of the box.
             </p>
           </div>
         </div>

@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
-import { Brain, Zap, CheckSquare } from "lucide-react";
+import { LayoutGrid, Zap, Play } from "lucide-react";
 
 const SeerLoop = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
     {
-      icon: Brain,
-      title: "Reflect",
-      description: "Analyze failures and store learnings in memory graph",
+      icon: LayoutGrid,
+      title: "Design",
+      description: "Describe your workflow in natural language or build visually",
     },
     {
       icon: Zap,
-      title: "Act",
-      description: "Execute agent actions within isolated sandbox",
+      title: "Build",
+      description: "AI suggests integrations and connects blocks automatically",
     },
     {
-      icon: CheckSquare,
-      title: "Evaluate",
-      description: "Assert environment state, not just text output",
+      icon: Play,
+      title: "Execute",
+      description: "Run workflows with real-time observability and control",
     },
   ];
 
@@ -33,9 +33,9 @@ const SeerLoop = () => {
     <section id="how-it-works" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">Why Seer's Different</h2>
+          <h2 className="text-5xl font-bold mb-4">How Seer Works</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Open-source, sandboxed, evals first.
+            Self-hostable workflow builder with AI assistance
           </p>
         </div>
 
@@ -179,9 +179,7 @@ const SeerLoop = () => {
           {/* Key differentiator text */}
           <div className="mt-12 text-center max-w-2xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              How do you ensure your agent's not hallucinating? 
-              <br />
-              How's your agent learning from failures?
+              Build complex automations without writing code. Test, iterate, and deploy workflows with confidence.
             </p>
           </div>
         </div>

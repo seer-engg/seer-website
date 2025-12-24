@@ -3,51 +3,51 @@ import { Check, X } from "lucide-react";
 const HomeComparisonTable = () => {
   const comparisons = [
     {
-      feature: "Scope",
-      traditional: "Single-Shot Request/Response",
-      seer: "Multi-Turn Conversations (10+ steps)",
+      feature: "AI Assistance",
+      traditional: "Manual block selection",
+      seer: "AI suggests blocks and connections",
       seerWins: true
     },
     {
-      feature: "Verification",
-      traditional: "Regex / LLM-as-a-Judge on Text",
-      seer: "State Assertion on Environment",
+      feature: "Control",
+      traditional: "Template-based, limited customization",
+      seer: "Fine-grained control over every step",
       seerWins: true
     },
     {
-      feature: "Context",
-      traditional: "Stateless",
-      seer: "Stateful (Memory, Files, DB)",
+      feature: "Integrations",
+      traditional: "Generic API connectors",
+      seer: "Context-aware integrations (GitHub, Asana, Gmail)",
       seerWins: true
     },
     {
-      feature: "Hard Part",
-      traditional: "Writing the Prompt",
-      seer: "Provisioning the Environment (Automated)",
+      feature: "State Management",
+      traditional: "Stateless or manual",
+      seer: "Built-in persistence and resumability",
       seerWins: true
     },
     {
-      feature: "State Reset",
-      traditional: "Manual (or ignored)",
-      seer: "Automated (Docker/Containers)",
+      feature: "Observability",
+      traditional: "Basic logs",
+      seer: "MLflow integration, execution history",
       seerWins: true
     },
     {
-      feature: "Mocking",
-      traditional: "Static HTTP responses",
-      seer: "Dynamic Interactive Mocks",
+      feature: "Self-Hostable",
+      traditional: "Cloud-only",
+      seer: "Self-hostable or cloud",
       seerWins: true
     },
     {
-      feature: "Memory",
-      traditional: "None (Clean slate every time)",
-      seer: "Persistent (Reflexion Graph)",
+      feature: "Read-Only First",
+      traditional: "Write permissions required",
+      seer: "Read-only scope first, safe testing",
       seerWins: true
     },
     {
-      feature: "Evolution",
-      traditional: "Static Test Cases",
-      seer: "Genetic Mutation (Fuzzing)",
+      feature: "Interrupt/Resume",
+      traditional: "Run to completion only",
+      seer: "Human-in-the-loop, interrupt and resume",
       seerWins: true
     }
   ];
@@ -56,9 +56,9 @@ const HomeComparisonTable = () => {
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">The Comparison</h2>
+          <h2 className="text-5xl font-bold mb-4">Seer vs. Other Workflow Platforms</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Why traditional eval tools fail for multi-turn agents
+            Built for AI workflows with fine-grained control
           </p>
         </div>
 
@@ -67,8 +67,8 @@ const HomeComparisonTable = () => {
             <thead>
               <tr className="border-b-2 border-border">
                 <th className="text-left p-4 font-semibold text-lg">Feature</th>
-                <th className="text-left p-4 font-semibold text-lg">Traditional Evals</th>
-                <th className="text-left p-4 font-semibold text-lg bg-secondary/30">Seer Sandbox</th>
+                <th className="text-left p-4 font-semibold text-lg">Traditional Platforms</th>
+                <th className="text-left p-4 font-semibold text-lg bg-secondary/30">Seer</th>
               </tr>
             </thead>
             <tbody>

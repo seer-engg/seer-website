@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <h3 className="font-mono font-semibold text-lg mb-2">Seer</h3>
             <p className="text-sm text-muted-foreground">
-              Context & eval management for tool-use agents.
+              Context management and workflow generation solution for enterprise.
               <br />
               Built for skeptics · Open Source
             </p>

@@ -4,61 +4,61 @@ const Asymmetry = () => {
   return (
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* The Developer Journey */}
+        {/* The Workflow-First Journey */}
         <div className="max-w-4xl mx-auto mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center">The Developer's Dilemma</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">The Workflow-First Approach</h2>
           
           {/* Timeline-style narrative */}
           <div className="space-y-12">
-            {/* Week 1: Building */}
-            <div className="relative pl-8 border-l-2 border-error/30">
-              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-error border-2 border-background"></div>
+            {/* Week 1: Build a Workflow */}
+            <div className="relative pl-8 border-l-2 border-success/30">
+              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-success border-2 border-background"></div>
               <div className="mb-2">
                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Week 1</span>
-                <h3 className="text-2xl font-semibold mt-1">You Build a Cool Feature</h3>
+                <h3 className="text-2xl font-semibold mt-1">You Build a Reliable Workflow</h3>
               </div>
               <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                <div className="text-muted-foreground">// Your agent can now sync GitHub PRs to Asana!</div>
-                <div className="text-foreground">agent.run("Sync PR #42 to Asana")</div>
-                <div className="text-success">✓ Worked perfectly in your test</div>
+                <div className="text-muted-foreground">// Your workflow syncs GitHub PRs to Asana</div>
+                <div className="text-foreground">workflow.run("Sync PR #42 to Asana")</div>
+                <div className="text-success">✓ Works perfectly every time</div>
               </div>
               <p className="text-muted-foreground">
-                You manually test it once. It works. You merge it. You feel good.
+                You build a workflow that reliably syncs GitHub PRs to Asana. It works consistently. You feel confident.
               </p>
             </div>
 
-            {/* Week 2: The Cracks */}
-            <div className="relative pl-8 border-l-2 border-warning/30">
-              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-warning border-2 border-background"></div>
+            {/* Week 2: Test and Iterate */}
+            <div className="relative pl-8 border-l-2 border-success/30">
+              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-success border-2 border-background"></div>
               <div className="mb-2">
                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Week 2</span>
-                <h3 className="text-2xl font-semibold mt-1">Edge Case Appears</h3>
+                <h3 className="text-2xl font-semibold mt-1">Add Edge Case Handling</h3>
               </div>
               <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                <div className="text-foreground">agent.run("Sync PR #103 to Asana")</div>
-                <div className="text-error">✗ Error: Ticket #456 is locked</div>
-                <div className="text-muted-foreground">// Step 7 changed. Your agent never checked locks.</div>
+                <div className="text-foreground">workflow.run("Sync PR #103 to Asana")</div>
+                <div className="text-success">✓ Handles locked tasks gracefully</div>
+                <div className="text-success">✓ Retries on API errors</div>
               </div>
               <p className="text-muted-foreground">
-                The workflow broke because an edge case in step 7 changed. You find out from a user.
+                You test edge cases and add error handling. The workflow becomes more robust.
               </p>
             </div>
 
-            {/* Week 3: The Realization */}
-            <div className="relative pl-8 border-l-2 border-error/30">
-              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-error border-2 border-background"></div>
+            {/* Week 3: Add AI Where Needed */}
+            <div className="relative pl-8 border-l-2 border-primary/30">
+              <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary border-2 border-background"></div>
               <div className="mb-2">
                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Week 3</span>
-                <h3 className="text-2xl font-semibold mt-1">You're Shipping Hope</h3>
+                <h3 className="text-2xl font-semibold mt-1">Enhance with AI</h3>
               </div>
-              <p className="text-lg text-foreground leading-relaxed mb-3">
-                You are shipping <span className="font-mono text-error">probabilistic code</span> and praying it converges on the right answer.
+              <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
+                <div className="text-foreground">workflow.run("Auto-categorize PRs with AI")</div>
+                <div className="text-success">✓ AI suggests PR categories</div>
+                <div className="text-success">✓ Workflow routes to correct team</div>
+              </div>
+              <p className="text-muted-foreground">
+                You add AI to categorize PRs automatically. The workflow is now intelligent, but built on a solid foundation.
               </p>
-              <div className="p-4 bg-error/5 border border-error/20 rounded">
-                <p className="text-sm text-foreground/80 font-semibold">
-                  This is "Dev without Evals" → Pure Hope
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -73,65 +73,36 @@ const Asymmetry = () => {
               <div className="flex-1 h-px bg-border"></div>
             </div>
 
-            <h2 className="text-4xl font-bold mb-8 text-center">The Alternative: Evals First</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center">The Alternative: Starting with AI</h2>
             
-            {/* Single timeline for evals path */}
+            {/* Single timeline for AI-first path */}
             <div className="space-y-12">
-              {/* Day 1: Just Run Seer */}
-              <div className="relative pl-8 border-l-2 border-success/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-success border-2 border-background"></div>
+              {/* Day 1: Start with AI */}
+              <div className="relative pl-8 border-l-2 border-error/30">
+                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-error border-2 border-background"></div>
                 <div className="mb-2">
                   <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Day 1</span>
-                  <h3 className="text-2xl font-semibold mt-1">You Write Zero Code</h3>
+                  <h3 className="text-2xl font-semibold mt-1">You Build an AI Agent</h3>
                 </div>
                 <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                  <div className="text-foreground">$ seer run --agent=github-sync</div>
-                  <div className="text-muted-foreground">Spinning up sandbox...</div>
-                  <div className="text-muted-foreground">Running 10-step workflow...</div>
+                  <div className="text-foreground">agent.run("Sync PRs to Asana")</div>
+                  <div className="text-muted-foreground">// Works sometimes, fails unpredictably</div>
                 </div>
                 <p className="text-muted-foreground">
-                  You just run Seer on your existing agent. No changes. No new features.
+                  You start by building a complex AI agent to sync PRs. It works sometimes, fails unpredictably.
                 </p>
               </div>
 
-              {/* Day 1: Results */}
-              <div className="relative pl-8 border-l-2 border-success/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-success border-2 border-background"></div>
+              {/* Day 2: Struggle with Reliability */}
+              <div className="relative pl-8 border-l-2 border-error/30">
+                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-error border-2 border-background"></div>
                 <div className="mb-2">
-                  <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">5 Minutes Later</span>
-                  <h3 className="text-2xl font-semibold mt-1">Seer Finds 4 Bugs</h3>
+                  <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Day 2</span>
+                  <h3 className="text-2xl font-semibold mt-1">Reliability Issues</h3>
                 </div>
-                <div className="space-y-2 mb-3">
-                  <div className="bg-secondary/30 p-3 rounded text-sm">
-                    <div className="font-mono text-error text-xs mb-1">FAIL: Step 7</div>
-                    <div className="text-foreground">Agent doesn't check rate limits on Asana API</div>
-                  </div>
-                  <div className="bg-secondary/30 p-3 rounded text-sm">
-                    <div className="font-mono text-error text-xs mb-1">FAIL: Step 3</div>
-                    <div className="text-foreground">Ticket lock status not verified before write</div>
-                  </div>
-                  <div className="bg-secondary/30 p-3 rounded text-sm">
-                    <div className="font-mono text-error text-xs mb-1">FAIL: Step 12</div>
-                    <div className="text-foreground">Branch protection rules not respected</div>
-                  </div>
-                </div>
-                <p className="text-lg text-foreground leading-relaxed">
-                  You have created <span className="font-semibold text-success">immense value</span> without writing a single line of feature code.
+                <p className="text-lg text-foreground leading-relaxed mb-3">
+                  The agent fails on edge cases. You spend weeks debugging. You realize you need a workflow foundation.
                 </p>
-              </div>
-
-              {/* The Insight */}
-              <div className="relative pl-8 border-l-2 border-primary/30">
-                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary border-2 border-background"></div>
-                <div className="p-6 bg-success/5 border border-success/20 rounded">
-                  <p className="text-lg text-foreground font-semibold mb-2">
-                    This is "Evals without Dev" → Immediate Value
-                  </p>
-                  <p className="text-muted-foreground">
-                    Even if you never write another line of agent code, knowing <span className="font-semibold text-foreground">exactly</span> where 
-                    your current agent fails (in a 10-step workflow) provides immediate architectural insight.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -141,25 +112,23 @@ const Asymmetry = () => {
         <div className="max-w-4xl mx-auto">
           <div className="p-8 border-2 border-primary/20 rounded-lg bg-primary/5">
             <div className="flex items-start gap-4 mb-6">
-              <TestTube className="w-8 h-8 text-primary flex-shrink-0 mt-1" strokeWidth={1.5} />
+              <Lightbulb className="w-8 h-8 text-primary flex-shrink-0 mt-1" strokeWidth={1.5} />
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Built for the Skeptics</h3>
+                <h3 className="text-2xl font-semibold mb-2">Workflows Provide the Foundation</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We spoke to 50+ YC startups. Most are skeptical that an "Evals Product" can exist. 
-                  They are right—if you think of evals as "checking if the LLM output contains a specific word."
+                  We spoke to 50+ teams building AI products. The successful ones started with workflows, then added AI where it added value. They didn't build agents on hope—they built workflows on solid foundations, then enhanced them with intelligence.
                 </p>
               </div>
             </div>
 
             <div className="border-l-4 border-primary/30 pl-6 py-2 mb-6">
               <p className="text-lg text-foreground leading-relaxed">
-                But for Agents, that doesn't matter. What matters is <span className="font-semibold text-xl text-primary">State Change</span>.
+                <span className="font-semibold text-xl text-primary">Workflows provide the foundation. AI enhances them.</span>
               </p>
             </div>
 
             <p className="text-lg text-foreground leading-relaxed">
-              Seer is built for the skeptics. We don't just check your prompt. We spin up a <span className="font-semibold">Sandbox</span>, 
-              let your agent run for 20 turns, and verify the <span className="font-semibold">outcome</span>.
+              Seer is built for this approach. Build reliable workflows first. Add AI where it makes sense. Test, iterate, and deploy with confidence.
             </p>
           </div>
         </div>

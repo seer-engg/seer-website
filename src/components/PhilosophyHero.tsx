@@ -15,22 +15,20 @@ const PhilosophyHero = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance tracking-tight">
-              The Asymmetry of Development
+              Workflows First, Agents Later
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              After interviewing 50+ YC startups, we discovered a fundamental truth: 
-              building agents without evals is probabilistic hope. But running evals 
-              without new code? That's immediate, actionable value.
+              After talking to 50+ teams building AI products, we learned: workflows come first. Start with reliable automations. Add AI where it adds value. Don't build agents on hope—build workflows on solid foundations.
             </p>
 
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 border-l-2 border-error/30 bg-error/5">
                 <TrendingDown className="w-5 h-5 text-error flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <div className="font-semibold text-foreground mb-1">Dev without Evals</div>
+                  <div className="font-semibold text-foreground mb-1">Agents First</div>
                   <div className="text-sm text-muted-foreground">
-                    Shipping probabilistic code and praying it converges
+                    Building complex agents before workflows exist. Shipping probabilistic code and hoping it works.
                   </div>
                 </div>
               </div>
@@ -38,9 +36,9 @@ const PhilosophyHero = () => {
               <div className="flex items-start gap-4 p-4 border-l-2 border-success/30 bg-success/5">
                 <TrendingUp className="w-5 h-5 text-success flex-shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <div className="font-semibold text-foreground mb-1">Evals without Dev</div>
+                  <div className="font-semibold text-foreground mb-1">Workflows First</div>
                   <div className="text-sm text-muted-foreground">
-                    Immediate architectural insight without writing a line
+                    Building reliable workflows first. Adding AI where it adds value. Immediate, actionable automation.
                   </div>
                 </div>
               </div>
@@ -103,7 +101,7 @@ const PhilosophyHero = () => {
                     textAnchor="middle"
                     className="text-[8px] font-bold fill-error"
                   >
-                    DEV
+                    AI
                   </text>
                   <text
                     x="40"
@@ -115,7 +113,7 @@ const PhilosophyHero = () => {
                   </text>
                 </g>
 
-                {/* Right side - Evals without Dev (higher) */}
+                {/* Right side - Workflows First (higher) */}
                 <g>
                   <line x1="160" y1="70" x2="160" y2="85" stroke="currentColor" strokeWidth="1" className="text-foreground/40" />
                   <circle
@@ -134,7 +132,7 @@ const PhilosophyHero = () => {
                     textAnchor="middle"
                     className="text-[8px] font-bold fill-success"
                   >
-                    EVAL
+                    WF
                   </text>
                   <text
                     x="160"
@@ -165,7 +163,7 @@ const PhilosophyHero = () => {
             {/* Scale label */}
             <div className="mt-6 text-center">
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-                The Fundamental Asymmetry
+                Workflows First Approach
               </p>
             </div>
           </div>
