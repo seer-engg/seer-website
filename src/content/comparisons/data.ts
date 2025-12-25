@@ -10,6 +10,106 @@ import type { ComparisonData } from "../comparisons-metadata";
 
 export const comparisons: ComparisonData[] = [
   {
+  slug: "composio-vs-nango",
+  app1: {
+    name: "Composio",
+    slug: "composio",
+    logo: "undefined",
+    websiteUrl: "https://docs.composio.dev",
+    domain: "docs.composio.dev",
+    description: "An SDK-first platform that provides agent toolkits and abstractions to allow LLM-powered agents to take actions across external services.",
+  },
+  app2: {
+    name: "Nango",
+    slug: "nango",
+    logo: "undefined",
+    websiteUrl: "https://nango.dev",
+    domain: "nango.dev",
+    description: "Open-source and cloud-hosted centralized token and connection manager focused on OAuth for 400+ providers with self-hosting and managed cloud options.",
+  },
+  comparisonRows: [
+    {
+      feature: "Product focus / primary capability",
+      app1Value: "Agent-focused platform with pre-built toolkits to enable LLM agents to take actions across services (advertises 500+ toolkits).",
+      app2Value: "Centralized OAuth and token-management API for integrations (advertises 400+ providers).",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Strengths",
+      app1Value: "SDK-first experience for TypeScript and Python; agent-oriented toolkits that speed prototyping of action-taking agents; marketed 500+ toolkits.",
+      app2Value: "Open-source with clear self-hosting guides; strong OAuth/token lifecycle handling; documented provider guides and advertised SOC2 Type II compliance.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Weaknesses",
+      app1Value: "Public docs lack definitive connector list, explicit auth/token storage details, and clear self-hosting/compliance statements.",
+      app2Value: "Free self-hosted edition has feature limits; some provider-specific edge cases may require custom provider configs or community fixes.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Ideal use cases",
+      app1Value: "Teams building LLM agents that must act (automation, agentic workflows, chatbots that perform external actions); rapid prototyping of agent workflows.",
+      app2Value: "Teams needing robust OAuth across many providers, centralized credential management, or the ability to self-host an integrations layer; enterprise-grade token lifecycle management.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Integrations / connector coverage",
+      app1Value: "Claims 500+ pre-built toolkits, but no definitive public list was found in research; suitable for agents if required connectors exist.",
+      app2Value: "Advertises 400+ provider integrations with provider-specific docs (GitHub, Slack, Google, Microsoft, Salesforce, etc.).",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Authentication support",
+      app1Value: "Abstracts authentication for agents; limited public details on specific flows (OAuth refresh/storage/encryption) — vendor confirmation required.",
+      app2Value: "Explicit OAuth 2.0 support, including GitHub App OAuth and refresh token handling; APIs to fetch valid tokens for apps.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "SDKs & languages",
+      app1Value: "Official SDKs for TypeScript/JavaScript and Python; agent runtimes and toolkit SDKs in GitHub repo.",
+      app2Value: "Official JavaScript/TypeScript SDKs plus HTTP API usable from any language; open-source allows community SDKs and customization.",
+      app1Wins: null,
+      
+    },
+    {
+      feature: "Deployment & hosting options",
+      app1Value: "Cloud-first with marketplace mentions of self-hosting; no clear public self-hosting deployment docs found.",
+      app2Value: "Clear self-hosting guides and a free self-hosted edition, plus Nango Cloud and Enterprise self-hosted offerings.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Pricing summary",
+      app1Value: "Tiered pricing referenced on third-party listing sites (Capterra/TrustRadius/SoftwareAdvice); official vendor pricing page not found in research — contact vendor.",
+      app2Value: "Free self-hosted edition and paid Nango Cloud tiers; official pricing is listed on https://nango.dev/pricing (confirm for up-to-date details).",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Security & compliance",
+      app1Value: "No clear public SOC2/ISO evidence found; recommend requesting security docs and SOC2 reports for enterprise evaluation.",
+      app2Value: "Advertises SOC2 Type II (product update) and GDPR considerations; recommend requesting SOC2 report and DPA for audits.",
+      app1Wins: false,
+      
+    }
+  ],
+  contentPath: "composio-vs-nango",
+  seo: {
+    title: "Composio vs Nango: Agent Toolkits vs OAuth Token Management [2026] | Seer",
+    description: "Compare Composio and Nango across architecture, integrations, auth, SDKs, hosting, pricing, and security to decide which fits agent-driven apps or centralized OAuth needs.",
+    keywords: ["Composio", "Nango", "OAuth", "agent toolkits", "integration platform"],
+  },
+  hashtags: ["#Composio", "#Nango", "#IntegrationPlatform"],
+  author: "Seer Team",
+  readTime: 8,
+},
+  {
   slug: "google-sheets-vs-microsoft-excel",
   app1: {
     name: "Google Sheets",
