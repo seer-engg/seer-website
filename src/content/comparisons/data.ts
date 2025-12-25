@@ -10,6 +10,478 @@ import type { ComparisonData } from "../comparisons-metadata";
 
 export const comparisons: ComparisonData[] = [
   {
+  slug: "google-sheets-vs-microsoft-excel",
+  app1: {
+    name: "Google Sheets",
+    slug: "google-sheets",
+    logo: "undefined",
+    websiteUrl: "https://workspace.google.com/products/sheets/",
+    domain: "workspace.google.com",
+    description: "Web-first spreadsheet in Google Workspace focused on real-time collaboration, cloud-native integrations, and lightweight analytics.",
+  },
+  app2: {
+    name: "Microsoft Excel",
+    slug: "microsoft-excel",
+    logo: "undefined",
+    websiteUrl: "https://www.microsoft.com/microsoft-365/excel",
+    domain: "microsoft.com",
+    description: "Mature desktop-first spreadsheet with advanced analysis tools, Power Query/Power Pivot, VBA macros, and deep BI integration.",
+  },
+  comparisonRows: [
+    {
+      feature: "Collaboration & sharing",
+      app1Value: "Real-time multi-user editing, presence indicators, granular Drive-based sharing, comments and suggestions.",
+      app2Value: "Co-authoring via OneDrive/SharePoint and Excel for the web; strong Teams integration but some desktop-only features limit web co-authoring.",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Formulas & functions",
+      app1Value: "Comprehensive set for everyday use, QUERY, ARRAYFORMULA, and newer AI-assisted functions on some Workspace SKUs.",
+      app2Value: "Largest established function library with niche financial/statistical/engineering functions; advanced analytics with Power Query and DAX.",
+      
+      
+    },
+    {
+      feature: "Performance & large datasets",
+      app1Value: "Designed for light-to-moderate datasets; browser performance and Sheets API quotas limit very large or complex models.",
+      app2Value: "Desktop 64-bit Excel and Power Pivot/Power Query support large datasets and in-memory analytics; limited by local system resources.",
+      
+      app2Wins: true,
+    },
+    {
+      feature: "Data size & scalability",
+      app1Value: "Practical limits for typical sheets; Connected Sheets integrates BigQuery for larger data but native sheets remain limited.",
+      app2Value: "Scales to millions of rows with Power Query/Data Model and 64-bit Excel given sufficient memory; better suited for massive datasets.",
+      
+      app2Wins: true,
+    },
+    {
+      feature: "Scripting & automation",
+      app1Value: "Google Apps Script (JavaScript) for cloud automation; runs on Google-managed servers with execution quotas and daily limits.",
+      app2Value: "VBA for powerful desktop macros; Office Scripts for web automation with Power Automate integration; strong enterprise automation via Power Platform.",
+      
+      app2Wins: true,
+    },
+    {
+      feature: "Integrations & add-ons",
+      app1Value: "Tight integrations with Google Workspace, BigQuery, and Marketplace add-ons; strong on web-first connectors.",
+      app2Value: "Integrates with OneDrive/SharePoint, Power BI, Power Platform, and AppSource add-ins; strong enterprise connectors.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Offline support",
+      app1Value: "Offline editing via browser (Drive offline) with limited functionality compared to online mode.",
+      app2Value: "Full-featured desktop apps with robust offline capabilities for heavy analysis and macros.",
+      
+      app2Wins: true,
+    },
+    {
+      feature: "Platforms",
+      app1Value: "Web, Android, iOS; no native desktop client—relies on browser for full experience.",
+      app2Value: "Desktop (Windows, Mac), web, mobile; desktop Excel provides the richest feature set.",
+      
+      app2Wins: true,
+    },
+    {
+      feature: "Security & compliance",
+      app1Value: "Enterprise security via Google Workspace (DLP, endpoint management, encryption); admin controls for scripts and APIs.",
+      app2Value: "Microsoft 365 security and compliance (DLP, Information Protection, Conditional Access); strong Azure AD integration.",
+      
+      
+    },
+    {
+      feature: "Pricing & licensing",
+      app1Value: "Included with Google Workspace; free consumer accounts available with limitations; Workspace tiers add admin controls and AI features.",
+      app2Value: "Included with Microsoft 365 subscriptions or available as standalone license; desktop access typically via Microsoft 365 SKUs.",
+      
+      
+    }
+  ],
+  contentPath: "google-sheets-vs-microsoft-excel",
+  seo: {
+    title: "Google Sheets vs Microsoft Excel: Which is Best? [2026] | Seer",
+    description: "Detailed 2024–2025 comparison of Google Sheets and Microsoft Excel for collaboration, formulas, performance, scripting, integrations, security, and pricing.",
+    keywords: ["Google Sheets", "Microsoft Excel", "spreadsheet comparison", "collaboration", "Power Query"],
+  },
+  hashtags: ["#GoogleSheets", "#MicrosoftExcel", "#SpreadsheetComparison"],
+  author: "Seer Team",
+  readTime: 10,
+},
+  {
+  slug: "neo4j-vs-memgraph",
+  app1: {
+    name: "Neo4j",
+    slug: "neo4j",
+    logo: "undefined",
+    websiteUrl: "https://neo4j.com/",
+    domain: "neo4j.com",
+    description: "Disk-backed native graph DB with enterprise features and Graph Data Science.",
+  },
+  app2: {
+    name: "Memgraph",
+    slug: "memgraph",
+    logo: "undefined",
+    websiteUrl: "https://memgraph.com/",
+    domain: "memgraph.com",
+    description: "In-memory-first graph DB optimized for real-time and streaming use cases.",
+  },
+  comparisonRows: [
+    {
+      feature: "Architecture",
+      app1Value: "Disk-backed native storage with page cache",
+      app2Value: "In-memory-first with optional persistence",
+      
+      
+    },
+    {
+      feature: "Performance",
+      app1Value: "Stable performance on large, disk-backed datasets",
+      app2Value: "Lower-latency for in-memory workloads",
+      
+      
+    },
+    {
+      feature: "Scalability",
+      app1Value: "Mature clustering and AuraDB managed cloud",
+      app2Value: "Enterprise clustering focused on in-memory replication",
+      
+      
+    },
+    {
+      feature: "Cypher",
+      app1Value: "Full Cypher support",
+      app2Value: "Cypher-compatible dialect; small differences",
+      
+      
+    },
+    {
+      feature: "Analytics",
+      app1Value: "Robust GDS library",
+      app2Value: "Real-time analytics and UDFs",
+      
+      
+    },
+    {
+      feature: "Integrations",
+      app1Value: "Wide connectors (Kafka, BI, ETL) and drivers",
+      app2Value: "Streaming-focused connectors and language bindings",
+      
+      
+    },
+    {
+      feature: "Licensing",
+      app1Value: "Community free; Enterprise paid",
+      app2Value: "Community free; Enterprise paid",
+      
+      
+    },
+    {
+      feature: "Security",
+      app1Value: "Enterprise RBAC, backups, operational tooling",
+      app2Value: "Enterprise security and support available",
+      
+      
+    }
+  ],
+  contentPath: "neo4j-vs-memgraph",
+  seo: {
+    title: "Neo4j vs Memgraph: Disk-backed vs In-memory [2026] | Seer",
+    description: "Compare Neo4j and Memgraph across architecture, performance, analytics, integrations, and pricing.",
+    keywords: ["Neo4j vs Memgraph", "graph database", "Cypher"],
+  },
+  hashtags: ["#GraphDatabases", "#RealtimeGraph"],
+  author: "Seer Team",
+  readTime: 10,
+},
+  {
+  slug: "langflow-vs-sim-ai",
+  app1: {
+    name: "Langflow",
+    slug: "langflow",
+    logo: "undefined",
+    websiteUrl: "https://github.com/langflow-ai/langflow",
+    domain: "github.com",
+    description: "Open-source, low-code graphical UI for LangChain to build, prototype, and export LLM workflows and RAG pipelines.",
+  },
+  app2: {
+    name: "Sim (Sim.ai / Sim Studio)",
+    slug: "sim-ai",
+    logo: "undefined",
+    websiteUrl: "https://www.sim.ai/",
+    domain: "sim.ai",
+    description: "Open-source visual workflow builder with hosted SaaS tiers for building, testing, and deploying production agentic workflows and automations.",
+  },
+  comparisonRows: [
+    {
+      feature: "Licensing & Cost",
+      app1Value: "MIT-licensed open-source; free to use. Third-party paid hosting available.",
+      app2Value: "Open-source core plus hosted tiers (Free, Pro, Team, Enterprise) with paid features.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Primary Focus",
+      app1Value: "LangChain-centric visual editor for rapid prototyping and exporting flows to LangChain code.",
+      app2Value: "Production-grade agent/workflow builder focused on integrations, deployment, and enterprise features.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Deployment Options",
+      app1Value: "Local-first: desktop app, pip package, Docker, or run from source; third-party hosts possible.",
+      app2Value: "Hosted SaaS plus self-hosted/open-source runtime; supports hybrid local model runtimes like Ollama.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Integrations & Connectors",
+      app1Value: "Extensible via LangChain connectors (OpenAI, Azure, Hugging Face, Pinecone, Weaviate, Milvus, etc.).",
+      app2Value: "Native connectors for REST APIs, webhooks, Slack/GitHub events, databases, and local LLM runtimes (Ollama).",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Enterprise Readiness",
+      app1Value: "Community-driven; enterprise readiness requires third-party hosting and internal controls.",
+      app2Value: "Explicit enterprise features and compliance posture (SOC2 mentions), status page, and enterprise support paths.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Developer Experience & Extensibility",
+      app1Value: "Designed for LangChain users; exports flows as LangChain-compatible JSON/code; supports custom components.",
+      app2Value: "Built for production integrations with programmatic endpoints, webhooks, scheduled triggers, and plugin-like connectors.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Pricing Model",
+      app1Value: "Free OSS core; paid hosting via third parties (pricing varies).",
+      app2Value: "Tiered subscription model (Free/Pro/Team/Enterprise); specifics behind site sign-up and enterprise sales.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Support & Community",
+      app1Value: "Community support via GitHub issues, discussions, and documentation; third-party paid support available.",
+      app2Value: "Public docs, status page, GitHub repo, and commercial support for paid plans; enterprise contact form for custom SLAs.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Security & Compliance",
+      app1Value: "No first-party SOC2 claims; security depends on deployment and hosting choices.",
+      app2Value: "SOC2 mentions and enterprise tooling indicate stronger out-of-the-box compliance posture for hosted customers.",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Exportability / Code Generation",
+      app1Value: "Strong: visual flows exportable to LangChain JSON/code for programmatic execution.",
+      app2Value: "Focus is on production endpoints and runtime orchestration; export-to-LangChain code not a core differentiator.",
+      app1Wins: true,
+      
+    }
+  ],
+  contentPath: "langflow-vs-sim-ai",
+  seo: {
+    title: "Langflow vs Sim.ai: Visual Agent Builders Compared [2026] | Seer",
+    description: "Compare Langflow and Sim.ai across architecture, integrations, deployment, pricing, and enterprise readiness to choose the right visual agent workflow builder.",
+    keywords: ["Langflow", "Sim.ai", "agent workflows", "LangChain", "RAG"],
+  },
+  hashtags: ["#Langflow", "#SimAI", "#AgentWorkflows"],
+  author: "Seer Team",
+  readTime: 10,
+},
+  {
+  slug: "gmail-vs-zoho-mail",
+  app1: {
+    name: "Google Workspace",
+    slug: "google-workspace",
+    logo: "undefined",
+    websiteUrl: "https://workspace.google.com/pricing",
+    domain: "workspace.google.com",
+    description: "Google Workspace (Gmail for business) — collaboration-first suite with Gmail, Drive, Docs, Meet, and advanced admin/security features.",
+  },
+  app2: {
+    name: "Zoho Mail",
+    slug: "zoho-mail",
+    logo: "undefined",
+    websiteUrl: "https://www.zoho.com/mail/",
+    domain: "zoho.com",
+    description: "Zoho Mail — cost-effective, privacy-oriented business email hosting integrated with Zoho Workplace and CRM.",
+  },
+  comparisonRows: [
+    {
+      feature: "Core suite & collaboration",
+      app1Value: "Gmail + Drive + Docs + Sheets + Slides + Meet + Chat (Spaces); real-time co-editing and deep collaboration",
+      app2Value: "Zoho Mail + WorkDrive + Writer + Sheet + Cliq; focused email with integrated Zoho collaboration apps",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Pricing tiers (typical list prices)",
+      app1Value: "Business Starter $6/user/mo, Business Standard $12/user/mo, Business Plus $18/user/mo, Enterprise (custom)",
+      app2Value: "Free tier; Mail Lite $1/user/mo, Mail Premium $4/user/mo; Workplace Standard $3/user/mo, Professional $6/user/mo (typical)",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Storage & quotas",
+      app1Value: "Per-user storage varies by tier (e.g., ~30 GB Starter, higher tiers 2 TB or pooled/enterprise options)",
+      app2Value: "Per-user mailbox sizes vary (e.g., 5–100 GB depending on plan) and WorkDrive pooled team storage; add-on storage available",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Security & privacy",
+      app1Value: "Security Center, investigation tool, DLP (higher tiers), endpoint/context-aware access, S/MIME on enterprise tiers; Google Cloud privacy resources",
+      app2Value: "Admin policies, 2FA, IP restrictions, spam/phishing protection, SIEM integration; privacy-forward, ad-free email stance",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Admin & enterprise features",
+      app1Value: "Central Admin console, advanced reporting, audit logs, app policy/OAuth controls, enterprise APIs",
+      app2Value: "Admin Console for domains, users, policies, delegation, storage quotas; SMB-focused UX with enterprise features available",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Integrations & ecosystem",
+      app1Value: "Extensive Marketplace, Gmail/Drive/Calendar APIs, SAML/OIDC identity integrations, third-party connectors",
+      app2Value: "Tight integration with Zoho ecosystem (CRM, Desk, Projects, WorkDrive, Cliq); IMAP/POP and APIs for custom connectors",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Mobile apps & offline",
+      app1Value: "Native Gmail, Drive, Docs, Meet apps for iOS/Android with offline capabilities and high polish",
+      app2Value: "Native Zoho Mail apps with push, folder sync, offline draft/read; IMAP/POP support for other clients",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Reliability & SLA",
+      app1Value: "99.9% SLA for paid plans; global infra and mature incident management",
+      app2Value: "Zoho claims 99.9% uptime for Mail; reliable for SMBs but smaller global footprint",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Support",
+      app1Value: "Plan-dependent support; 24/7 phone/chat on higher tiers and reseller support options",
+      app2Value: "Help portal and support portal; paid plans include higher-priority support and SLAs",
+      app1Wins: true,
+      
+    }
+  ],
+  contentPath: "gmail-vs-zoho-mail",
+  seo: {
+    title: "Gmail vs Zoho Mail: Which is Best? [2026] | Seer",
+    description: "Compare Gmail (Google Workspace) vs Zoho Mail: pricing, security, admin features, integrations, storage, mobile apps, support, pros/cons and recommendations for 2026.",
+    keywords: ["Gmail vs Zoho", "Google Workspace comparison", "Zoho Mail comparison"],
+  },
+  hashtags: ["#GmailVsZoho", "#BusinessEmail", "#EmailHosting"],
+  author: "Seer Team",
+  readTime: 8,
+},
+  {
+  slug: "asana-vs-linear",
+  app1: {
+    name: "Asana",
+    slug: "asana",
+    logo: "undefined",
+    websiteUrl: "https://asana.com",
+    domain: "asana.com",
+    description: "A mature, full-featured work and project management platform for cross-functional teams with portfolio, goals, and enterprise-grade admin controls.",
+  },
+  app2: {
+    name: "Linear",
+    slug: "linear",
+    logo: "undefined",
+    websiteUrl: "https://linear.app",
+    domain: "linear.app",
+    description: "A fast, opinionated issue-tracking and product workflow tool built for engineering teams, optimized for speed, keyboard-first UX, and VCS integrations.",
+  },
+  comparisonRows: [
+    {
+      feature: "Core object model",
+      app1Value: "Tasks-first with projects, portfolios, goals",
+      app2Value: "Issues-first with projects, cycles, initiatives",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Project views",
+      app1Value: "List, Board, Timeline, Calendar, Workload",
+      app2Value: "Project lists, boards, cycles; fewer visualization types",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Automation",
+      app1Value: "Rules engine, Asana AI features on paid tiers",
+      app2Value: "Targeted automations for dev workflows, webhooks",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Integrations ecosystem",
+      app1Value: "Extensive marketplace across business and dev tools",
+      app2Value: "Developer-focused integrations (Git, CI, monitoring)",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "API & dev friendliness",
+      app1Value: "REST API with webhooks and SDKs",
+      app2Value: "GraphQL API and webhooks optimized for dev workflows",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Mobile apps",
+      app1Value: "Full-featured iOS/Android apps; some views limited",
+      app2Value: "Fast mobile apps optimized for issue capture",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Security & compliance",
+      app1Value: "Enterprise-grade compliance (SOC/ISO), SSO/SCIM",
+      app2Value: "Enterprise security features available; consult for compliance details",
+      app1Wins: true,
+      
+    },
+    {
+      feature: "Pricing & value",
+      app1Value: "Tiered pricing; can be costly for Business/Enterprise needs",
+      app2Value: "Simpler pricing; potentially more cost-effective for engineering teams",
+      app1Wins: false,
+      
+    },
+    {
+      feature: "Best fit",
+      app1Value: "Cross-functional, enterprise programs",
+      app2Value: "Engineering/product teams",
+      
+      
+    }
+  ],
+  contentPath: "asana-vs-linear",
+  seo: {
+    title: "Asana vs Linear: Which is Best? [2026] | Seer",
+    description: "Compare Asana and Linear in 2026: features, pricing, integrations, security, and recommended use cases for teams choosing between a full-featured work management platform and a developer-first issue tracker.",
+    keywords: ["Asana vs Linear", "project management", "issue tracker", "workflow tools"],
+  },
+  hashtags: ["#WorkManagement", "#DeveloperTools"],
+  author: "Seer Team",
+  readTime: 8,
+},
+  {
   slug: "cursor-vs-cline",
   app1: {
     name: "Cursor",
