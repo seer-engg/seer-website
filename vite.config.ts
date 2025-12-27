@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  preview: {
+    // Ensure preview mode handles SPA routing correctly
+    // All routes should fallback to index.html for client-side routing
+  },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
