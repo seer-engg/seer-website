@@ -65,7 +65,7 @@ const Features = () => {
               <h3 className="text-2xl font-semibold">Advanced Execution Engine</h3>
             </div>
             <p className="text-muted-foreground">
-              Streaming execution with real-time updates. Interrupt handling for human-in-the-loop workflows. Persistent state management. MLflow integration for observability.
+              Streaming execution with real-time updates. Interrupt handling for human-in-the-loop workflows. Persistent state management.
             </p>
           </div>
         </div>

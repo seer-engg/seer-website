@@ -29,7 +29,7 @@ const HomeComparisonTable = () => {
     {
       feature: "Observability",
       traditional: "Basic logs",
-      seer: "MLflow integration, execution history",
+      seer: "Detailed tracing & execution history",
       seerWins: true
     },
     {
