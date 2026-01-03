@@ -9,6 +9,8 @@ import ComparisonsIndex from "./pages/ComparisonsIndex";
 import ComparisonDetail from "./pages/ComparisonDetail";
 import BlogsIndex from "./pages/BlogsIndex";
 import BlogDetail from "./pages/BlogDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/comparisons/:slug" element={<ComparisonDetail />} />
           <Route path="/blogs" element={<BlogsIndex />} />
           <Route path="/blogs/:slug" element={<BlogDetail />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

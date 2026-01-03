@@ -27,7 +27,7 @@ const Navbar = () => {
             </Button>
             <Button variant="outline" size="sm" className="hidden md:inline-flex" asChild>
               <a href="https://github.com/seer-engg/seer" target="_blank" rel="noopener noreferrer">
-                Github
+                GitHub
                 <Github className="w-4 h-4" />
               </a>
             </Button>
