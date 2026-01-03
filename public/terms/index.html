@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seer Terms of Service</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fdfdfd;
+        --fg: #111;
+        --muted: #555;
+        --border: #e5e7eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #050505;
+          --fg: #f5f5f5;
+          --muted: #b3b3b3;
+          --border: #1f2937;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        background: var(--bg);
+        color: var(--fg);
+        padding: 0 1rem 4rem;
+      }
+      header {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 0 1rem;
+        text-align: center;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      }
+      @media (prefers-color-scheme: dark) {
+        main {
+          background: rgba(15, 23, 42, 0.7);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+        }
+      }
+      h1, h2, h3, h4 {
+        font-family: "JetBrains Mono", "Inter", system-ui, sans-serif;
+      }
+      h2 { margin-top: 2.5rem; }
+      h3 { margin-top: 1.5rem; }
+      a { color: inherit; text-decoration: underline; }
+      ul, ol { padding-left: 1.4rem; }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p><a href="/">← Back to Seer</a></p>
+      <h1>Seer Terms of Service</h1>
+      <p>Last updated January 2025</p>
+    </header>
+    <main>
+<h1>Seer Terms of Service</h1>
+<p><strong>Last Updated: January 2025</strong></p>
+<h2>The Straightforward Version</h2>
+<p>We built Seer to give you control over your AI workflows with security baked in. Here&#39;s how it works and what we expect from each other.</p>
+<h2>1. What Seer Is</h2>
+<p>Seer is an open-source AI workflow platform available in two flavors:</p>
+<ul>
+<li><strong>Self-Hosted</strong>: You run everything on your infrastructure. Your data never touches our servers.</li>
+<li><strong>Cloud (app.getseer.dev)</strong>: We host it for you on Railway. We store what&#39;s needed to make workflows run.</li>
+</ul>
+<h2>2. Your Account (Cloud Version)</h2>
+<p>When you use app.getseer.dev:</p>
+<ul>
+<li>You&#39;re responsible for keeping your credentials secure</li>
+<li>One account per person (no sharing logins)</li>
+<li>Don&#39;t use it for anything illegal or to harm others</li>
+<li>You can delete your account anytime, which deletes all your data</li>
+</ul>
+<h2>3. What We Store (Cloud Version)</h2>
+<p>We&#39;re transparent about data:</p>
+<p><strong>We Store:</strong></p>
+<ul>
+<li>Your workflow configurations</li>
+<li>OAuth tokens for connected services (Gmail, Slack, etc.)</li>
+<li>Workflow execution logs and intermediate data</li>
+<li>Account information (email, usage metrics)</li>
+</ul>
+<p><strong>We Don&#39;t:</strong></p>
+<ul>
+<li>Train AI models on your data</li>
+<li>Sell your data to anyone</li>
+<li>Share your data except as required by law</li>
+<li>Access your data unless you explicitly request support</li>
+</ul>
+<p><strong>Storage Location:</strong> Railway&#39;s infrastructure (US-based)</p>
+<h2>4. What We Don&#39;t Store (Self-Hosted)</h2>
+<p>When you self-host:</p>
+<ul>
+<li>Everything stays on your infrastructure</li>
+<li>No telemetry, analytics, or data flows back to us</li>
+<li>You&#39;re responsible for your own backups and security</li>
+<li>We literally can&#39;t see your data</li>
+</ul>
+<h2>5. Third-Party Services</h2>
+<p><strong>OAuth Integrations:</strong>
+We use read-only OAuth scopes by default. When you connect Gmail, Slack, or other services:</p>
+<ul>
+<li>We only request the minimum permissions needed</li>
+<li>Tokens are stored encrypted in our database (cloud) or your database (self-hosted)</li>
+<li>You can revoke access anytime through the service provider</li>
+<li>We pass data through to make workflows work, but we&#39;re not reading your emails or snooping</li>
+</ul>
+<p><strong>AI Models (OpenAI GPT-4 class):</strong></p>
+<ul>
+<li>Cloud: Your workflow data goes to OpenAI&#39;s API to process requests</li>
+<li>Self-Hosted: You supply your own API key; data goes directly from your instance to OpenAI</li>
+<li>OpenAI has their own terms—check them out at openai.com/policies</li>
+</ul>
+<h2>6. Open Source &amp; Licensing</h2>
+<p><strong>Code License:</strong> AGPL-3.0</p>
+<ul>
+<li>You can fork, modify, and self-host freely</li>
+<li>If you modify and distribute Seer, you must share your changes</li>
+<li>Enterprise/commercial use that doesn&#39;t comply with AGPL? Contact us for a commercial license</li>
+</ul>
+<p><strong>Enterprise Licensing:</strong>
+Need a different license for your business? Email us at <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a></p>
+<h2>7. What You Can&#39;t Do</h2>
+<p>Don&#39;t:</p>
+<ul>
+<li>Use Seer to break laws or violate others&#39; rights</li>
+<li>Attempt to hack, abuse, or overwhelm our systems</li>
+<li>Scrape or reverse-engineer our cloud service (but the code is open source anyway!)</li>
+<li>Resell our cloud service without permission</li>
+<li>Use it to generate spam, phishing, malware, or other harmful content</li>
+<li>Violate the terms of integrated services (OpenAI, Google, Slack, etc.)</li>
+</ul>
+<h2>8. Service Availability</h2>
+<p><strong>Cloud Version:</strong></p>
+<ul>
+<li>We provide app.getseer.dev &quot;as is&quot;</li>
+<li>We aim for high uptime but can&#39;t guarantee 100%</li>
+<li>We may need to do maintenance (we&#39;ll try to warn you)</li>
+<li>It&#39;s currently free, but we plan to add paid tiers soon</li>
+</ul>
+<p><strong>Self-Hosted:</strong></p>
+<ul>
+<li>You&#39;re responsible for uptime, backups, security</li>
+<li>We provide the code and updates, you handle infrastructure</li>
+</ul>
+<h2>9. Pricing Changes</h2>
+<p>Right now, cloud is free. When we add paid tiers:</p>
+<ul>
+<li>We&#39;ll give you advance notice (at least 30 days)</li>
+<li>Your existing workflows won&#39;t break</li>
+<li>We&#39;ll grandfather early users where reasonable</li>
+</ul>
+<h2>10. Support &amp; Warranties</h2>
+<p><strong>What We Provide:</strong></p>
+<ul>
+<li>Community support via GitHub Issues</li>
+<li>Documentation and guides</li>
+<li>Bug fixes and security updates</li>
+</ul>
+<p><strong>What We Don&#39;t Promise:</strong></p>
+<ul>
+<li>That Seer will be perfect (no software is)</li>
+<li>That your workflows will always work (APIs change, stuff breaks)</li>
+<li>That we&#39;ll fix every feature request</li>
+<li>Legal advice about how you use Seer</li>
+</ul>
+<p><strong>THE SERVICE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES.</strong> We built this to be useful, but we can&#39;t guarantee it&#39;ll work perfectly for every use case.</p>
+<h2>11. Liability Limits</h2>
+<p>We&#39;re a small team building something useful. We&#39;re not a giant corporation with deep pockets.</p>
+<p><strong>Here&#39;s the deal:</strong></p>
+<ul>
+<li>We&#39;re not liable for data loss, workflow failures, or business impacts</li>
+<li>Maximum liability is $100 or what you paid us in the last 12 months (currently $0 for cloud)</li>
+<li>We&#39;re not responsible for third-party services (OpenAI, Railway, OAuth providers)</li>
+</ul>
+<p><strong>Translation:</strong> Use Seer responsibly. Don&#39;t rely on it for life-critical systems without proper backups and fallbacks.</p>
+<h2>12. Privacy &amp; Data Deletion</h2>
+<p>See our Privacy Policy for details, but the key points:</p>
+<ul>
+<li>You own your data</li>
+<li>Cloud users can export and delete data anytime</li>
+<li>When you delete your account, we delete your data within 30 days</li>
+<li>Self-hosted users control their own data completely</li>
+</ul>
+<h2>13. Changes to These Terms</h2>
+<p>We may update these terms:</p>
+<ul>
+<li>We&#39;ll post updates on GitHub and email cloud users</li>
+<li>Continued use means you accept the changes</li>
+<li>If you don&#39;t like changes, you can stop using the service or migrate to self-hosted</li>
+</ul>
+<h2>14. Termination</h2>
+<p><strong>You can leave anytime:</strong></p>
+<ul>
+<li>Delete your cloud account</li>
+<li>Stop using self-hosted version</li>
+</ul>
+<p><strong>We can terminate your account if:</strong></p>
+<ul>
+<li>You violate these terms</li>
+<li>You&#39;re abusing the system</li>
+<li>Required by law</li>
+</ul>
+<p>We&#39;ll try to warn you first unless it&#39;s an emergency.</p>
+<h2>15. Governing Law</h2>
+<p>These terms are governed by US law (we&#39;re based in the US). Any disputes will be handled in US courts.</p>
+<h2>16. Contact</h2>
+<p>Questions, concerns, or feedback?</p>
+<ul>
+<li>Email: <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a></li>
+<li>GitHub Issues: github.com/yourusername/seer (for technical stuff)</li>
+<li>Website: getseer.dev</li>
+</ul>
+<hr>
+<h2>Developer&#39;s Note</h2>
+<p>We wrote these terms to be clear, not sneaky. We&#39;re building Seer in the open because we believe AI workflows should be transparent and secure. If something here is confusing or seems unfair, let us know. We&#39;re developers like you, and we want these terms to be reasonable.</p>
+<p>Read-only by default. Open source by design. That&#39;s the Seer way.</p>
+
+    </main>
+    <footer>
+      © Seer. Questions? akshay@getseer.dev
+    </footer>
+  </body>
+</html>
