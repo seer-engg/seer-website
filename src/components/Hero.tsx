@@ -1,4 +1,4 @@
-import Terminal from "./Terminal";
+import VideoEmbed from "./VideoEmbed";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
               Visual workflow builder with AI assistance. Self-hostable, fine-grained control, rich integrations.
             </p>
           </div>
-          <Terminal />
+          <VideoEmbed />
         </div>
       </div>
     </section>
