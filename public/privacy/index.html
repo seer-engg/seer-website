@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seer Privacy Policy</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fdfdfd;
+        --fg: #111;
+        --muted: #555;
+        --border: #e5e7eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #050505;
+          --fg: #f5f5f5;
+          --muted: #b3b3b3;
+          --border: #1f2937;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        background: var(--bg);
+        color: var(--fg);
+        padding: 0 1rem 4rem;
+      }
+      header {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem 0 1rem;
+        text-align: center;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      }
+      @media (prefers-color-scheme: dark) {
+        main {
+          background: rgba(15, 23, 42, 0.7);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+        }
+      }
+      h1, h2, h3, h4 {
+        font-family: "JetBrains Mono", "Inter", system-ui, sans-serif;
+      }
+      h2 {
+        margin-top: 2.5rem;
+      }
+      h3 {
+        margin-top: 1.5rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+      table th, table td {
+        border: 1px solid var(--border);
+        padding: 0.75rem;
+        text-align: left;
+      }
+      code, pre {
+        font-family: "JetBrains Mono", Consolas, monospace;
+      }
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p><a href="/">← Back to Seer</a></p>
+      <h1>Seer Privacy Policy</h1>
+      <p>Last updated January 2025</p>
+    </header>
+    <main>
+<h1>Seer Privacy Policy</h1>
+<p><strong>Last Updated: January 2025</strong></p>
+<h2>TL;DR</h2>
+<p><strong>Self-Hosted:</strong> We don&#39;t see your data. Period.</p>
+<p><strong>Cloud (app.getseer.dev):</strong> We store only what&#39;s needed to run your workflows. We don&#39;t sell data, train models on it, or do anything sketchy. You can export or delete everything anytime.</p>
+<hr>
+<h2>The Full Story</h2>
+<p>We&#39;re developers building for developers. This policy explains exactly what data we collect, why, and what we do with it. No legal jargon runaround.</p>
+<h2>1. Two Different Privacy Models</h2>
+<h3>Self-Hosted Seer</h3>
+<p><strong>What we collect:</strong> Nothing. Zero. Nada.</p>
+<p>When you run Seer on your own infrastructure:</p>
+<ul>
+<li>All data stays on your servers</li>
+<li>No telemetry phones home</li>
+<li>No analytics tracking</li>
+<li>No &quot;product improvement&quot; data collection</li>
+<li>We have no technical ability to see your workflows, data, or usage</li>
+</ul>
+<p><strong>Your responsibility:</strong> Security, backups, compliance with laws, protecting your own users&#39; data if you&#39;re running it for others.</p>
+<h3>Cloud Seer (app.getseer.dev)</h3>
+<p>We collect what&#39;s necessary to provide the service. Here&#39;s everything:</p>
+<h2>2. Information We Collect (Cloud Only)</h2>
+<h3>Account Information</h3>
+<ul>
+<li>Email address (for login and notifications)</li>
+<li>Password (hashed with bcrypt, we never see the plaintext)</li>
+<li>Account creation date</li>
+<li>Last login time</li>
+</ul>
+<h3>Workflow Data</h3>
+<ul>
+<li>Workflow configurations you create</li>
+<li>Node connections and logic you build</li>
+<li>Execution logs (what ran, when, success/failure)</li>
+<li>Intermediate data generated during workflow runs</li>
+</ul>
+<h3>OAuth &amp; Integration Data</h3>
+<ul>
+<li>OAuth tokens for services you connect (Gmail, Slack, Google Drive, etc.)</li>
+<li>These are encrypted in our PostgreSQL database on Railway</li>
+<li>We store them only to make API calls on your behalf</li>
+<li>Integration metadata (which services connected, when)</li>
+</ul>
+<h3>Usage Data</h3>
+<ul>
+<li>How many workflows you run</li>
+<li>API call counts (to manage rate limits)</li>
+<li>Error logs (to help debug issues)</li>
+<li>Feature usage (which nodes you use most)</li>
+</ul>
+<h3>Technical Data</h3>
+<ul>
+<li>IP address (for security and rate limiting)</li>
+<li>Browser/device type (for compatibility)</li>
+<li>Session data (to keep you logged in)</li>
+</ul>
+<h2>3. What We Don&#39;t Collect</h2>
+<p>We explicitly <strong>DO NOT</strong> collect:</p>
+<ul>
+<li>Payment information (we&#39;re free right now, and when we charge, we&#39;ll use Stripe)</li>
+<li>Location data beyond IP-based country</li>
+<li>Biometrics or sensitive personal identifiers</li>
+<li>Contents of your connected services (we don&#39;t read your emails or messages)</li>
+<li>Phone numbers or physical addresses</li>
+<li>Social security numbers or government IDs</li>
+<li>Anything not listed in Section 2</li>
+</ul>
+<h2>4. How We Use Your Data</h2>
+<p><strong>To Run the Service:</strong></p>
+<ul>
+<li>Execute your workflows when triggered</li>
+<li>Make API calls to integrated services using your OAuth tokens</li>
+<li>Send you notifications about workflow status</li>
+<li>Authenticate you when you log in</li>
+</ul>
+<p><strong>To Improve Seer:</strong></p>
+<ul>
+<li>Analyze which features are used (aggregated, not personally identified)</li>
+<li>Debug errors and fix bugs</li>
+<li>Improve performance and reliability</li>
+</ul>
+<p><strong>To Communicate:</strong></p>
+<ul>
+<li>Send service updates or security alerts</li>
+<li>Respond to your support requests</li>
+<li>Notify you of terms/policy changes (rare)</li>
+</ul>
+<p><strong>What We DON&#39;T Do:</strong></p>
+<ul>
+<li>Sell or rent your data to anyone</li>
+<li>Use your data to train AI models</li>
+<li>Share data with advertisers</li>
+<li>Send marketing emails (unless you opt in, which isn&#39;t even an option yet)</li>
+<li>Give governments access unless legally compelled (see Section 8)</li>
+</ul>
+<h2>5. Data Sharing &amp; Third Parties</h2>
+<h3>Services We Use</h3>
+<p><strong>Railway (Hosting):</strong></p>
+<ul>
+<li>Where we run app.getseer.dev</li>
+<li>Has access to database backups</li>
+<li>Subject to Railway&#39;s privacy policy</li>
+<li>US-based infrastructure</li>
+</ul>
+<p><strong>OpenAI (AI Processing):</strong></p>
+<ul>
+<li>Your workflow prompts and data go to OpenAI&#39;s API when you use AI nodes</li>
+<li>Subject to OpenAI&#39;s data policies (they claim not to train on API data as of Jan 2025)</li>
+<li>This is unavoidable if you want AI in workflows—data must reach the model</li>
+</ul>
+<p><strong>OAuth Providers (Google, Slack, etc.):</strong></p>
+<ul>
+<li>We receive only what you authorize via OAuth scopes</li>
+<li>Data flows through Seer to complete your workflows</li>
+<li>We use read-only scopes by default</li>
+</ul>
+<h3>Who We Don&#39;t Share With</h3>
+<ul>
+<li>Advertisers</li>
+<li>Data brokers</li>
+<li>Random third parties</li>
+<li>Other users (your workflows are private)</li>
+</ul>
+<h3>When We Might Share</h3>
+<p>We&#39;ll share data only if:</p>
+<ol>
+<li><strong>You direct us to</strong> (e.g., sharing a workflow with a teammate—feature not built yet)</li>
+<li><strong>Required by law</strong> (subpoena, court order, legal obligation)</li>
+<li><strong>To prevent harm</strong> (fraud, security threats, illegal activity)</li>
+<li><strong>Company sale</strong> (if we get acquired, data transfers with the service—we&#39;d notify you)</li>
+</ol>
+<h2>6. Data Storage &amp; Security</h2>
+<h3>Where Data Lives</h3>
+<ul>
+<li><strong>Primary:</strong> Railway&#39;s PostgreSQL database (US region)</li>
+<li><strong>Backups:</strong> Railway&#39;s automated backup system</li>
+<li><strong>Encryption:</strong> Data encrypted in transit (TLS) and at rest (database-level encryption)</li>
+</ul>
+<h3>Security Measures</h3>
+<ul>
+<li>OAuth tokens stored encrypted with application-level encryption</li>
+<li>Passwords hashed with bcrypt (industry standard)</li>
+<li>Regular security updates to dependencies</li>
+<li>Read-only OAuth scopes to minimize risk</li>
+<li>Rate limiting to prevent abuse</li>
+</ul>
+<h3>What We Can&#39;t Prevent</h3>
+<p>We&#39;re a small team. We do our best, but:</p>
+<ul>
+<li>No system is 100% secure</li>
+<li>Railway could have a breach (we&#39;d notify you)</li>
+<li>OpenAI could have issues</li>
+<li>If you reuse passwords, that&#39;s on you</li>
+</ul>
+<p><strong>Use strong, unique passwords. Enable 2FA when we add it.</strong></p>
+<h2>7. Your Rights &amp; Controls</h2>
+<h3>Access Your Data</h3>
+<ul>
+<li>Export your workflows anytime (feature coming soon)</li>
+<li>Request a copy of all data we have on you: email <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a></li>
+</ul>
+<h3>Delete Your Data</h3>
+<ul>
+<li><strong>Account Deletion:</strong> Settings → Delete Account<ul>
+<li>We delete all workflows, logs, OAuth tokens, and account data within 30 days</li>
+<li>Some data may persist in backups for up to 90 days, then it&#39;s gone</li>
+</ul>
+</li>
+<li><strong>Specific Data:</strong> Disconnect OAuth integrations in settings to delete those tokens</li>
+</ul>
+<h3>Modify Your Data</h3>
+<ul>
+<li>Edit workflows anytime</li>
+<li>Update email in account settings</li>
+<li>Revoke OAuth tokens through the provider (Google, Slack, etc.)</li>
+</ul>
+<h3>Object to Processing</h3>
+<ul>
+<li>Don&#39;t like how we handle data? Self-host instead.</li>
+<li>For cloud users: we need certain data to function, but you can always delete your account</li>
+</ul>
+<h2>8. Law Enforcement &amp; Transparency</h2>
+<h3>Our Policy</h3>
+<ul>
+<li>We&#39;ll push back on overly broad requests</li>
+<li>We&#39;ll notify you if legally permitted</li>
+<li>We&#39;ll publish a transparency report if we ever receive requests (none so far)</li>
+</ul>
+<h3>What We&#39;d Provide if Required</h3>
+<ul>
+<li>Account information (email, creation date)</li>
+<li>Workflow configurations and logs</li>
+<li>IP addresses and access logs</li>
+<li>We cannot provide plaintext passwords (we don&#39;t have them)</li>
+</ul>
+<h2>9. Children&#39;s Privacy</h2>
+<p>Seer is not intended for users under 13. We don&#39;t knowingly collect data from children. If we discover we have, we&#39;ll delete it immediately.</p>
+<p>If you&#39;re under 18, get parental permission before using Seer.</p>
+<h2>10. International Users</h2>
+<h3>US-Based Service</h3>
+<ul>
+<li>Data stored in the US</li>
+<li>Subject to US law</li>
+<li>No GDPR compliance yet (we&#39;re not targeting EU)</li>
+</ul>
+<h3>If You&#39;re Outside the US</h3>
+<ul>
+<li>Your data transfers to and is stored in the US</li>
+<li>US privacy laws may differ from your country&#39;s</li>
+<li>Use self-hosted version if data residency is critical</li>
+</ul>
+<h2>11. Cookies &amp; Tracking</h2>
+<h3>What We Use</h3>
+<ul>
+<li><strong>Session cookies:</strong> Keep you logged in</li>
+<li><strong>Security cookies:</strong> CSRF protection</li>
+</ul>
+<h3>What We Don&#39;t Use</h3>
+<ul>
+<li>Advertising cookies</li>
+<li>Social media tracking pixels</li>
+<li>Analytics beyond basic usage stats</li>
+</ul>
+<h3>Your Browser</h3>
+<p>Modern browsers let you control cookies. Disabling them will break login functionality.</p>
+<h2>12. Data Retention</h2>
+<h3>Active Accounts (Cloud)</h3>
+<ul>
+<li>Workflow data: Kept until you delete it</li>
+<li>Logs: Kept for 90 days, then deleted</li>
+<li>OAuth tokens: Kept until you disconnect or delete account</li>
+</ul>
+<h3>Deleted Accounts</h3>
+<ul>
+<li>Data deleted within 30 days of account deletion</li>
+<li>Backups purged within 90 days</li>
+<li>Some aggregated analytics may persist (anonymized, no personal identifiers)</li>
+</ul>
+<h3>Self-Hosted</h3>
+<ul>
+<li>You control retention completely</li>
+</ul>
+<h2>13. Changes to This Policy</h2>
+<p>We may update this policy as Seer evolves:</p>
+<ul>
+<li>Major changes: We&#39;ll email you 30 days in advance</li>
+<li>Minor clarifications: Posted on GitHub with changelog</li>
+<li>Continued use after changes means acceptance</li>
+<li>Don&#39;t like it? You can delete your account or migrate to self-hosted</li>
+</ul>
+<h2>14. Your Choices Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Cloud Solution</th>
+<th>Self-Hosted Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Data privacy</td>
+<td>Trust us + Railway + OpenAI</td>
+<td>Complete control</td>
+</tr>
+<tr>
+<td>No third-party access</td>
+<td>Not possible (needs OpenAI API)</td>
+<td>Use your own API key directly</td>
+</tr>
+<tr>
+<td>Data residency</td>
+<td>US only</td>
+<td>Wherever you host</td>
+</tr>
+<tr>
+<td>Right to delete</td>
+<td>Yes, anytime</td>
+<td>You control it</td>
+</tr>
+<tr>
+<td>Audit trail</td>
+<td>Request from us</td>
+<td>In your database</td>
+</tr>
+<tr>
+<td>No vendor lock-in</td>
+<td>Export workflows</td>
+<td>You have the code</td>
+</tr>
+</tbody></table>
+<h2>15. Contact &amp; Questions</h2>
+<p><strong>Privacy concerns or questions:</strong></p>
+<ul>
+<li>Email: <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a></li>
+<li>For data deletion or access requests: Same email</li>
+<li>Response time: We&#39;ll try for 48 hours, but we&#39;re a small team</li>
+</ul>
+<p><strong>Security issues:</strong></p>
+<ul>
+<li>Email: <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a> with subject &quot;SECURITY&quot;</li>
+<li>We&#39;ll acknowledge within 24 hours</li>
+<li>We don&#39;t have a bug bounty program yet, but we&#39;ll credit you if you want</li>
+</ul>
+<h2>16. Compliance &amp; Certifications</h2>
+<p><strong>Current Status:</strong></p>
+<ul>
+<li>Not GDPR compliant (US-only for now)</li>
+<li>Not HIPAA compliant (don&#39;t use for healthcare data)</li>
+<li>Not SOC 2 certified (it&#39;s on the roadmap for enterprise)</li>
+</ul>
+<p><strong>If You Need Compliance:</strong></p>
+<ul>
+<li>Self-host and handle it yourself, or</li>
+<li>Wait for enterprise cloud offering with certifications, or</li>
+<li>Use Seer only for non-sensitive workflows</li>
+</ul>
+<hr>
+<h2>Final Word from the Developer</h2>
+<p>We built Seer because we were frustrated with workflow tools that asked for full read/write access to everything. Read-only by default is our philosophy.</p>
+<p>This privacy policy reflects that: we take only what we need, store it securely, and give you control. No hidden agendas, no data brokering, no bullshit.</p>
+<p>If you don&#39;t trust us? Self-host. The code is open. That&#39;s the point.</p>
+<p>Questions? <a href="mailto:akshay@getseer.dev">akshay@getseer.dev</a></p>
+<p>— Akshay, Founder</p>
+
+    </main>
+    <footer>
+      © Seer. Questions? akshay@getseer.dev
+    </footer>
+  </body>
+</html>
