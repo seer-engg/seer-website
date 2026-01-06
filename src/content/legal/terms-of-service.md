@@ -2,6 +2,8 @@
 
 **Last Updated: January 2025**
 
+**Operating Entity:** Seer is operated by X26, Inc., a US-based company. All references to "Seer," "we," "us," and "our" refer to X26, Inc. and its Seer platform.
+
 ## The Straightforward Version
 
 We built Seer to give you control over your AI workflows with security baked in. Here's how it works and what we expect from each other.
@@ -156,7 +158,7 @@ We'll try to warn you first unless it's an emergency.
 
 ## 15. Governing Law
 
-These terms are governed by US law (we're based in the US). Any disputes will be handled in US courts.
+These terms are governed by US law. X26, Inc., the US-based operating entity for Seer, is subject to US jurisdiction. Any disputes will be handled in US courts.
 
 ## 16. Contact
 
@@ -164,6 +166,20 @@ Questions, concerns, or feedback?
 - Email: akshay@getseer.dev
 - GitHub Issues: github.com/yourusername/seer (for technical stuff)
 - Website: getseer.dev
+
+---
+
+## 17. Operating Company & Legal Entity
+
+Seer is operated by X26, Inc., a US-based company. X26, Inc. is the legal entity responsible for:
+- The Seer platform and all cloud services
+- Data processing and storage
+- Service availability and support
+- Compliance with applicable laws
+
+All references to "we," "us," "our," and "Seer" in these terms refer to X26, Inc. and its Seer product.
+
+Contact for legal inquiries: akshay@getseer.dev
 
 ---
 

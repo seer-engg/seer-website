@@ -2,6 +2,8 @@
 
 **Last Updated: January 2025**
 
+**Operating Entity:** Seer is a product of X26, Inc., a US-based company. All references to "Seer," "we," "us," and "our" throughout this policy refer to X26, Inc. and its Seer platform.
+
 ## TL;DR
 
 **Self-Hosted:** We don't see your data. Period.
@@ -149,7 +151,7 @@ We'll share data only if:
 - Rate limiting to prevent abuse
 
 ### What We Can't Prevent
-We're a small team. We do our best, but:
+As a lean team at X26, Inc., we do our best, but:
 - No system is 100% secure
 - Railway could have a breach (we'd notify you)
 - OpenAI could have issues
@@ -283,9 +285,21 @@ We may update this policy as Seer evolves:
 
 ---
 
+## 17. Legal Entity & Organization
+
+**Operating Company:** X26, Inc.
+
+Seer is a product of X26, Inc., a US-based company incorporated in the United States. X26, Inc. is the legal entity responsible for the Seer platform, cloud infrastructure (app.getseer.dev), and all associated services.
+
+References throughout this Privacy Policy to "we," "us," "our," and "Seer" refer to X26, Inc. and its Seer product offering.
+
+All data processing, legal obligations, and operational responsibility for the Seer service fall under X26, Inc.'s authority and US jurisdiction.
+
+---
+
 ## Final Word from the Developer
 
-We built Seer because we were frustrated with workflow tools that asked for full read/write access to everything. Read-only by default is our philosophy.
+At X26, Inc., we built Seer because we were frustrated with workflow tools that asked for full read/write access to everything. Read-only by default is our philosophy.
 
 This privacy policy reflects that: we take only what we need, store it securely, and give you control. No hidden agendas, no data brokering, no bullshit.
 
