@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,6 +27,15 @@ const Footer = () => {
                 >
                   App Comparisons
                 </Link>
+                <a
+                  href="https://docs.getseer.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  Documentation
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
 

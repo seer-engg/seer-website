@@ -13,12 +13,21 @@ const Navbar = () => {
               <img src={logo} alt="Seer logo" className="w-10 h-10" />
               <span className="text-xl font-mono font-semibold tracking-tight">Seer</span>
             </Link>
-            <Link 
-              to="/blogs" 
+            <Link
+              to="/blogs"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blog
             </Link>
+            <a
+              href="https://docs.getseer.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+            >
+              Docs
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
           
           <div className="flex items-center gap-3">
