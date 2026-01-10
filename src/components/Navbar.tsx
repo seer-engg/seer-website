@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/images/logo.png";
 import { ExternalLink, Github } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -31,6 +32,7 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <Button size="sm" asChild>
               <Link to="/demo">Book a demo</Link>
             </Button>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import bugsnagLogo from "@/images/bugsnag-logo.png";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Footer = () => {
   return (
@@ -73,11 +74,12 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="mt-4">
+        {/* Bottom Copyright with Theme Toggle */}
+        <div className="mt-4 flex items-center justify-center gap-4">
           <p className="text-xs text-muted-foreground text-center">
             © {new Date().getFullYear()} X26, Inc. All rights reserved.
           </p>
+          <ThemeToggle />
         </div>
       </div>
     </footer>

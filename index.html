@@ -1,8 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" suppressHydrationWarning>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Theme initialization script (prevents FOUC) -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'system';
+        const isDark = theme === 'dark' ||
+          (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
     <title>Seer - Build AI Workflows, Not Code | Visual Workflow Builder with AI Assistance</title>
     <meta name="description" content="Seer is a self-hostable workflow builder with AI assistance. Build complex automations with visual editing, fine-grained control, and rich integrations (GitHub, Google Workspace, and more)." />
     <meta name="author" content="X26, Inc." />
