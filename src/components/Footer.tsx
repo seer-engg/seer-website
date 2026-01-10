@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
+import bugsnagLogo from "@/images/bugsnag-logo.png";
 
 const Footer = () => {
   return (
@@ -59,9 +60,22 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Sponsor Section */}
+        <div className="mt-8 pt-6 border-t border-border flex flex-col items-center gap-3">
+          <a
+            href="https://www.bugsnag.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity"
+          >
+            <span className="text-xs text-muted-foreground">Error tracking by</span>
+            <img src={bugsnagLogo} alt="Bugsnag" className="h-6 object-contain" />
+          </a>
+        </div>
+
         {/* Bottom Copyright */}
-        <div className="mt-8 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground">
+        <div className="mt-4">
+          <p className="text-xs text-muted-foreground text-center">
             © {new Date().getFullYear()} X26, Inc. All rights reserved.
           </p>
         </div>
