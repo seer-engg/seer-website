@@ -15,6 +15,12 @@ const Navbar = () => {
               <span className="text-xl font-mono font-semibold tracking-tight">Seer</span>
             </Link>
             <Link
+              to="/pricing"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Pricing
+            </Link>
+            <Link
               to="/blogs"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
