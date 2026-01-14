@@ -11,20 +11,15 @@ const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly");
 
   const handleFreeTrial = () => {
-    window.location.href = "https://app.getseer.dev/signup";
+    window.location.href = "https://app.getseer.dev";
   };
 
   const handleSignUp = (tier: string) => {
     if (tier === "free") {
       handleFreeTrial();
     } else {
-      window.location.href = "https://app.getseer.dev/signup";
+      window.location.href = "https://app.getseer.dev";
     }
-  };
-
-  const handleContactUs = () => {
-    // You can update this to point to a contact form or email
-    window.location.href = "mailto:sales@getseer.dev?subject=Seer%20Pricing%20Inquiry";
   };
 
   return (
@@ -82,9 +77,7 @@ const Pricing = () => {
                   key={tier.tier}
                   tier={tier}
                   billingPeriod={billingPeriod}
-                  onFreeTrial={() => handleFreeTrial()}
                   onSignUp={() => handleSignUp(tier.tier)}
-                  onContactUs={() => handleContactUs()}
                 />
               ))}
             </div>
@@ -132,12 +125,10 @@ const Pricing = () => {
 interface PricingCardProps {
   tier: PricingTier;
   billingPeriod: "monthly" | "annual";
-  onFreeTrial: () => void;
   onSignUp: () => void;
-  onContactUs: () => void;
 }
 
-function PricingCard({ tier, billingPeriod, onFreeTrial, onSignUp, onContactUs }: PricingCardProps) {
+function PricingCard({ tier, billingPeriod, onSignUp }: PricingCardProps) {
   const displayPrice = billingPeriod === "monthly" ? tier.monthly : Math.floor(tier.annual / 12);
   const periodLabel = billingPeriod === "monthly" ? "month" : "year";
   const isFreePlan = tier.tier === "free";
@@ -182,28 +173,14 @@ function PricingCard({ tier, billingPeriod, onFreeTrial, onSignUp, onContactUs }
           ))}
         </ul>
 
-        {/* CTA Buttons */}
-        <div className="space-y-2 pt-4 mt-auto">
-          <Button
-            className="w-full"
-            variant={isFreePlan ? "outline" : "brand"}
-            onClick={onFreeTrial}
-          >
-            Start free trial
-          </Button>
+        {/* CTA Button */}
+        <div className="pt-4 mt-auto">
           <Button
             className="w-full"
             variant="brand"
             onClick={onSignUp}
           >
-            Sign up / Get started
-          </Button>
-          <Button
-            className="w-full"
-            variant="outline"
-            onClick={onContactUs}
-          >
-            Learn more / Contact us
+            Start
           </Button>
         </div>
       </CardContent>
