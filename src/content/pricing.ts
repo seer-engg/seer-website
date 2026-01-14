@@ -1,4 +1,4 @@
-export type SubscriptionTier = "free" | "pro" | "pro_plus" | "ultra";
+export type SubscriptionTier = "free" | "pro";
 
 export interface PricingTier {
   tier: SubscriptionTier;
@@ -17,9 +17,12 @@ export const PRICING_TIERS: PricingTier[] = [
     monthly: 0,
     annual: 0,
     features: [
-      "Basic workflows",
-      "Limited runs each month",
-      "Community support",
+      "3 workflows",
+      "100 workflow-runs/month",
+      "5 Chat AI messages",
+      "14-day limit",
+      "15min polling frequency",
+      "$5 LLM credits/month",
     ],
   },
   {
@@ -29,33 +32,15 @@ export const PRICING_TIERS: PricingTier[] = [
     monthly: 20,
     annual: 200,
     features: [
-      "More workflow runs",
-      "Priority execution",
-      "Email support",
-    ],
-  },
-  {
-    tier: "pro_plus",
-    name: "Pro+",
-    description: "For power users",
-    monthly: 60,
-    annual: 600,
-    features: [
-      "High volume runs",
-      "Advanced workflow controls",
-      "Priority support",
-    ],
-  },
-  {
-    tier: "ultra",
-    name: "Ultra",
-    description: "Enterprise scale",
-    monthly: 100,
-    annual: 1000,
-    features: [
-      "Unlimited runs",
-      "All features unlocked",
-      "Dedicated support",
+      "Unlimited workflows",
+      "1M workflow-runs/month",
+      "100 Chat AI messages",
+      "No day limit",
+      "1min polling frequency",
+      "$20 LLM credits/month",
+      "Global variables",
+      "User management & RBAC",
+      "SSO",
     ],
   },
 ];
