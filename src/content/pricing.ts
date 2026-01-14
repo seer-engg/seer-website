@@ -1,4 +1,4 @@
-export type SubscriptionTier = "free" | "pro";
+export type SubscriptionTier = "free" | "pro" | "pro_plus";
 
 export interface PricingTier {
   tier: SubscriptionTier;
@@ -38,7 +38,16 @@ export const PRICING_TIERS: PricingTier[] = [
       "No day limit",
       "1min polling frequency",
       "$20 LLM credits/month",
-      "Global variables",
+    ],
+  },
+  {
+    tier: "pro_plus",
+    name: "Pro+",
+    description: "For teams with advanced needs",
+    monthly: 60,
+    annual: 600,
+    features: [
+      "Everything in Pro",
       "User management & RBAC",
       "SSO",
     ],
