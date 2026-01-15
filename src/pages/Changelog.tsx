@@ -62,9 +62,6 @@ const Changelog = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Changelog
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Track the latest updates, features, and improvements to Seer.
-            </p>
           </div>
         </section>
 
