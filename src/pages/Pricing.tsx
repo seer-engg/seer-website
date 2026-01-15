@@ -70,8 +70,8 @@ const Pricing = () => {
 
         {/* Pricing Cards Grid */}
         <section className="px-6 py-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex justify-center">
+            <div className="flex flex-wrap gap-6 justify-center">
               {PRICING_TIERS.map((tier) => (
                 <PricingCard
                   key={tier.tier}
