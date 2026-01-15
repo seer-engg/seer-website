@@ -33,6 +33,12 @@ const Navbar = () => {
             >
               Blog
             </Link>
+            <Link
+              to="/changelog"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Changelog
+            </Link>
             <a
               href="https://docs.getseer.dev"
               target="_blank"
