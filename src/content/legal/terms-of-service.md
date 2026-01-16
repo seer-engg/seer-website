@@ -65,13 +65,13 @@ We use read-only OAuth scopes by default. When you connect Gmail, Slack, or othe
 
 ## 6. Open Source & Licensing
 
-**Code License:** AGPL-3.0
+**Code License:** MIT
+- The core Seer platform is available under the MIT license
 - You can fork, modify, and self-host freely
-- If you modify and distribute Seer, you must share your changes
-- Enterprise/commercial use that doesn't comply with AGPL? Contact us for a commercial license
+- Enterprise features (if any exist) in the `ee/` directory have a separate license
 
 **Enterprise Licensing:**
-Need a different license for your business? Email us at akshay@getseer.dev
+Need enterprise features or a custom agreement? Email us at akshay@getseer.dev
 
 ## 7. What You Can't Do
 
