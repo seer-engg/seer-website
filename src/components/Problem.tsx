@@ -14,7 +14,7 @@ const Problem = () => {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="p-8 border border-border rounded-lg bg-background">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tools like Make, n8n, and Zapier are great for simple automations. But AI workflows need fine-grained control, state management, and the ability to interrupt and resume. They need integrations that understand context, not just API calls.
+              Tools like Make, n8n, and Zapier are great for simple automations. But AI workflows need oversight and cost controls, state management, and the ability to interrupt and resume. They need integrations that understand context, not just API calls.
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ const Problem = () => {
             </div>
             <h3 className="text-2xl font-semibold mb-4">Limited Control</h3>
             <p className="text-muted-foreground">
-              Most platforms hide complexity behind templates. Real workflows need fine-grained control over every step and decision point.
+              Most platforms hide complexity behind templates. Real workflows need oversight over every step and decision point.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ const Problem = () => {
             </div>
             <h3 className="text-2xl font-semibold mb-4">State Management</h3>
             <p className="text-muted-foreground">
-              Workflows fail when state isn't managed. Seer handles persistence, resumability, and observability out of the box.
+              Workflows fail when state isn't managed. Seer handles persistence, resumability, and transparent execution out of the box.
             </p>
           </div>
         </div>

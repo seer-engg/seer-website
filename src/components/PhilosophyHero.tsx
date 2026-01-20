@@ -19,7 +19,7 @@ const PhilosophyHero = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              After talking to 50+ teams building AI products, we learned: workflows come first. Start with reliable automations. Add AI where it adds value. Don't build agents on hope—build workflows on solid foundations.
+              After talking to 50+ consultants and technical specialists, we learned: workflows come first. Start with reliable automations. Add AI where it adds value. Don't automate on hope—build workflows on solid foundations.
             </p>
 
             <div className="space-y-4">

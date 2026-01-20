@@ -9,9 +9,9 @@ const HomeComparisonTable = () => {
       seerWins: true
     },
     {
-      feature: "Control",
+      feature: "Control & Oversight",
       traditional: "Template-based, limited customization",
-      seer: "Fine-grained control over every step",
+      seer: "Control & oversight over every step",
       seerWins: true
     },
     {
@@ -21,13 +21,13 @@ const HomeComparisonTable = () => {
       seerWins: true
     },
     {
-      feature: "State Management",
+      feature: "Reliability",
       traditional: "Stateless or manual",
       seer: "Built-in persistence and resumability",
       seerWins: true
     },
     {
-      feature: "Observability",
+      feature: "Execution Transparency",
       traditional: "Basic logs",
       seer: "Detailed tracing & execution history",
       seerWins: true
@@ -45,9 +45,15 @@ const HomeComparisonTable = () => {
       seerWins: true
     },
     {
-      feature: "Interrupt/Resume",
+      feature: "Human Oversight",
       traditional: "Run to completion only",
       seer: "Human-in-the-loop, interrupt and resume",
+      seerWins: true
+    },
+    {
+      feature: "Cost Governance",
+      traditional: "No built-in spend caps",
+      seer: "Built-in cost controls and budget limits",
       seerWins: true
     }
   ];
@@ -58,7 +64,7 @@ const HomeComparisonTable = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">Seer vs. Other Workflow Platforms</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Built for AI workflows with fine-grained control
+            Built for AI workflows with oversight and cost governance
           </p>
         </div>
 

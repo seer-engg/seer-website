@@ -18,12 +18,12 @@ const Asymmetry = () => {
                 <h3 className="text-2xl font-semibold mt-1">You Build a Reliable Workflow</h3>
               </div>
               <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                <div className="text-muted-foreground">// Your workflow syncs GitHub PRs to Asana</div>
-                <div className="text-foreground">workflow.run("Sync PR #42 to Asana")</div>
+                <div className="text-muted-foreground">// Your workflow routes support tickets</div>
+                <div className="text-foreground">workflow.run("Route ticket to correct team")</div>
                 <div className="text-success">✓ Works perfectly every time</div>
               </div>
               <p className="text-muted-foreground">
-                You build a workflow that reliably syncs GitHub PRs to Asana. It works consistently. You feel confident.
+                You build a workflow that reliably routes support tickets to the correct team. It works consistently. You feel confident.
               </p>
             </div>
 
@@ -35,8 +35,8 @@ const Asymmetry = () => {
                 <h3 className="text-2xl font-semibold mt-1">Add Edge Case Handling</h3>
               </div>
               <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                <div className="text-foreground">workflow.run("Sync PR #103 to Asana")</div>
-                <div className="text-success">✓ Handles locked tasks gracefully</div>
+                <div className="text-foreground">workflow.run("Route ticket #103")</div>
+                <div className="text-success">✓ Handles edge cases gracefully</div>
                 <div className="text-success">✓ Retries on API errors</div>
               </div>
               <p className="text-muted-foreground">
@@ -52,12 +52,12 @@ const Asymmetry = () => {
                 <h3 className="text-2xl font-semibold mt-1">Enhance with AI</h3>
               </div>
               <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                <div className="text-foreground">workflow.run("Auto-categorize PRs with AI")</div>
-                <div className="text-success">✓ AI suggests PR categories</div>
+                <div className="text-foreground">workflow.run("Auto-categorize tickets with AI")</div>
+                <div className="text-success">✓ AI suggests ticket categories</div>
                 <div className="text-success">✓ Workflow routes to correct team</div>
               </div>
               <p className="text-muted-foreground">
-                You add AI to categorize PRs automatically. The workflow is now intelligent, but built on a solid foundation.
+                You add AI to categorize tickets automatically. The workflow is now intelligent, but built on a solid foundation.
               </p>
             </div>
           </div>
@@ -85,11 +85,11 @@ const Asymmetry = () => {
                   <h3 className="text-2xl font-semibold mt-1">You Build an AI Agent</h3>
                 </div>
                 <div className="bg-secondary/30 p-4 rounded font-mono text-sm mb-3">
-                  <div className="text-foreground">agent.run("Sync PRs to Asana")</div>
-                  <div className="text-muted-foreground">// Works sometimes, fails unpredictably</div>
+                  <div className="text-foreground">agent.run("Route support tickets")</div>
+                  <div className="text-muted-foreground">// Works sometimes, costs spiral</div>
                 </div>
                 <p className="text-muted-foreground">
-                  You start by building a complex AI agent to sync PRs. It works sometimes, fails unpredictably.
+                  You start by building a complex AI agent to route tickets. It works sometimes, costs spiral unpredictably.
                 </p>
               </div>
 
@@ -101,7 +101,7 @@ const Asymmetry = () => {
                   <h3 className="text-2xl font-semibold mt-1">Reliability Issues</h3>
                 </div>
                 <p className="text-lg text-foreground leading-relaxed mb-3">
-                  The agent fails on edge cases. You spend weeks debugging. You realize you need a workflow foundation.
+                  The agent fails on edge cases. Costs overrun your budget. You realize you need a workflow foundation with controls.
                 </p>
               </div>
             </div>
@@ -116,7 +116,7 @@ const Asymmetry = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Workflows Provide the Foundation</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We spoke to 50+ teams building AI products. The successful ones started with workflows, then added AI where it added value. They didn't build agents on hope—they built workflows on solid foundations, then enhanced them with intelligence.
+                  We spoke to 50+ consultants and technical specialists. The successful ones started with workflows, then added AI where it added value. They didn't automate on hope—they built workflows on solid foundations, then enhanced them with intelligence.
                 </p>
               </div>
             </div>

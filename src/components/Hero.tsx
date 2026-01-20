@@ -10,7 +10,7 @@ const Hero = () => {
               Build AI Workflows, Not Code.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance mb-12">
-              Visual workflow builder with AI assistance. Self-hostable, fine-grained control, rich integrations.
+              Visual workflow builder with AI assistance. Self-hostable, cost governance, transparent execution.
             </p>
           </div>
           <VideoEmbed />
