@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="font-mono font-semibold text-lg mb-2">Seer</h3>
             <p className="text-sm text-muted-foreground max-w-md">
-              Context management and workflow generation solution for enterprise.
+              Workflow automation with oversight and cost governance.
               <br />
               Built for skeptics · Open Source
             </p>
