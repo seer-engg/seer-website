@@ -263,7 +263,8 @@ We may update this policy as Seer evolves:
 
 **Privacy concerns or questions:**
 - Email: akshay@getseer.dev
-- For data deletion or access requests: Same email
+- Community Forum: forum.getseer.dev (for general questions)
+- For data deletion or access requests: Email only (akshay@getseer.dev)
 - Response time: We'll try for 48 hours, but we're a small team
 
 **Security issues:**

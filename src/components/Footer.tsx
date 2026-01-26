@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             <div>
               <h4 className="font-mono font-medium text-sm mb-3">Product</h4>
               <div className="space-y-2">
@@ -55,6 +55,30 @@ const Footer = () => {
                 >
                   Terms of Service
                 </Link>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-mono font-medium text-sm mb-3">Community</h4>
+              <div className="space-y-2">
+                <a
+                  href="https://discord.gg/sBh9Rsxf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  Discord
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://forum.getseer.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  Forum
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
           </div>

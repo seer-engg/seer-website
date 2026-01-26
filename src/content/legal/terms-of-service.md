@@ -164,7 +164,8 @@ These terms are governed by US law. X26, Inc., the US-based operating entity for
 
 Questions, concerns, or feedback?
 - Email: akshay@getseer.dev
-- GitHub Issues: github.com/yourusername/seer (for technical stuff)
+- Community Forum: forum.getseer.dev (for discussions and questions)
+- GitHub Issues: github.com/seer-engg/seer (for bug reports and technical issues)
 - Website: getseer.dev
 
 ---
