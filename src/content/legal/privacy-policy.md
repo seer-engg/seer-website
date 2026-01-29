@@ -66,18 +66,38 @@ We collect what's necessary to provide the service. Here's everything:
 - Browser/device type (for compatibility)
 - Session data (to keep you logged in)
 
-## 3. What We Don't Collect
+## 3. Payment Information (Cloud Only)
+
+### What We Collect
+- Payment method details (credit card information)
+- Collected and processed securely via Stripe
+- We never see or store full card numbers
+- Billing address and payment history
+- Subscription status and trial information
+
+### How We Use It
+- Required to start 14-day trial
+- Process subscription charges after trial period
+- Manage billing and invoices
+- Detect and prevent fraud
+
+### PCI-DSS Compliance
+- All payment data handled by Stripe (PCI-DSS Level 1 certified)
+- We only store Stripe customer IDs and payment method metadata
+- Full card details never touch our servers
+
+## 4. What We Don't Collect
 
 We explicitly **DO NOT** collect:
-- Payment information (we're free right now, and when we charge, we'll use Stripe)
+- Full credit card numbers (Stripe handles this)
 - Location data beyond IP-based country
 - Biometrics or sensitive personal identifiers
 - Contents of your connected services (we don't read your emails or messages)
 - Phone numbers or physical addresses
 - Social security numbers or government IDs
-- Anything not listed in Section 2
+- Anything not listed in Sections 2 and 3
 
-## 4. How We Use Your Data
+## 5. How We Use Your Data
 
 **To Run the Service:**
 - Execute your workflows when triggered
@@ -102,7 +122,7 @@ We explicitly **DO NOT** collect:
 - Send marketing emails (unless you opt in, which isn't even an option yet)
 - Give governments access unless legally compelled (see Section 8)
 
-## 5. Data Sharing & Third Parties
+## 6. Data Sharing & Third Parties
 
 ### Services We Use
 
@@ -111,6 +131,13 @@ We explicitly **DO NOT** collect:
 - Has access to database backups
 - Subject to Railway's privacy policy
 - US-based infrastructure
+
+**Stripe (Payments):**
+- Processes all payment information
+- PCI-DSS Level 1 compliant
+- We only receive payment method metadata
+- Required to start trial and process subscriptions
+- Subject to Stripe's privacy policy
 
 **OpenAI (AI Processing):**
 - Your workflow prompts and data go to OpenAI's API when you use AI nodes
@@ -136,7 +163,7 @@ We'll share data only if:
 3. **To prevent harm** (fraud, security threats, illegal activity)
 4. **Company sale** (if we get acquired, data transfers with the service—we'd notify you)
 
-## 6. Data Storage & Security
+## 7. Data Storage & Security
 
 ### Where Data Lives
 - **Primary:** Railway's PostgreSQL database (US region)
@@ -159,7 +186,7 @@ As a lean team at X26, Inc., we do our best, but:
 
 **Use strong, unique passwords. Enable 2FA when we add it.**
 
-## 7. Your Rights & Controls
+## 8. Your Rights & Controls
 
 ### Access Your Data
 - Export your workflows anytime (feature coming soon)
@@ -180,7 +207,7 @@ As a lean team at X26, Inc., we do our best, but:
 - Don't like how we handle data? Self-host instead.
 - For cloud users: we need certain data to function, but you can always delete your account
 
-## 8. Law Enforcement & Transparency
+## 9. Law Enforcement & Transparency
 
 ### Our Policy
 - We'll push back on overly broad requests
@@ -193,13 +220,13 @@ As a lean team at X26, Inc., we do our best, but:
 - IP addresses and access logs
 - We cannot provide plaintext passwords (we don't have them)
 
-## 9. Children's Privacy
+## 10. Children's Privacy
 
 Seer is not intended for users under 13. We don't knowingly collect data from children. If we discover we have, we'll delete it immediately.
 
 If you're under 18, get parental permission before using Seer.
 
-## 10. International Users
+## 11. International Users
 
 ### US-Based Service
 - Data stored in the US
@@ -211,7 +238,7 @@ If you're under 18, get parental permission before using Seer.
 - US privacy laws may differ from your country's
 - Use self-hosted version if data residency is critical
 
-## 11. Cookies & Tracking
+## 12. Cookies & Tracking
 
 ### What We Use
 - **Session cookies:** Keep you logged in
@@ -225,7 +252,7 @@ If you're under 18, get parental permission before using Seer.
 ### Your Browser
 Modern browsers let you control cookies. Disabling them will break login functionality.
 
-## 12. Data Retention
+## 13. Data Retention
 
 ### Active Accounts (Cloud)
 - Workflow data: Kept until you delete it
@@ -240,7 +267,7 @@ Modern browsers let you control cookies. Disabling them will break login functio
 ### Self-Hosted
 - You control retention completely
 
-## 13. Changes to This Policy
+## 14. Changes to This Policy
 
 We may update this policy as Seer evolves:
 - Major changes: We'll email you 30 days in advance
@@ -248,7 +275,7 @@ We may update this policy as Seer evolves:
 - Continued use after changes means acceptance
 - Don't like it? You can delete your account or migrate to self-hosted
 
-## 14. Your Choices Summary
+## 15. Your Choices Summary
 
 | Concern | Cloud Solution | Self-Hosted Solution |
 |---------|----------------|----------------------|
@@ -259,7 +286,7 @@ We may update this policy as Seer evolves:
 | Audit trail | Request from us | In your database |
 | No vendor lock-in | Export workflows | You have the code |
 
-## 15. Contact & Questions
+## 16. Contact & Questions
 
 **Privacy concerns or questions:**
 - Email: akshay@getseer.dev
@@ -272,7 +299,7 @@ We may update this policy as Seer evolves:
 - We'll acknowledge within 24 hours
 - We don't have a bug bounty program yet, but we'll credit you if you want
 
-## 16. Compliance & Certifications
+## 17. Compliance & Certifications
 
 **Current Status:**
 - Not GDPR compliant (US-only for now)
@@ -286,7 +313,7 @@ We may update this policy as Seer evolves:
 
 ---
 
-## 17. Legal Entity & Organization
+## 18. Legal Entity & Organization
 
 **Operating Company:** X26, Inc.
 
