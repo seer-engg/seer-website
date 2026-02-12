@@ -3,57 +3,45 @@ import { Check, X } from "lucide-react";
 const HomeComparisonTable = () => {
   const comparisons = [
     {
-      feature: "AI Assistance",
-      traditional: "Manual block selection",
-      seer: "AI suggests blocks and connections",
+      feature: "Set up without coding",
+      traditional: "Templates only — customization requires code",
+      seer: "AI helps you build exactly what you need, no code",
       seerWins: true
     },
     {
-      feature: "Control & Oversight",
-      traditional: "Template-based, limited customization",
-      seer: "Control & oversight over every step",
+      feature: "Know what it's doing",
+      traditional: "Runs in a black box, basic logs",
+      seer: "See every step as it runs, full activity history",
       seerWins: true
     },
     {
-      feature: "Integrations",
-      traditional: "Generic API connectors",
-      seer: "Context-aware integrations (GitHub, Asana, Gmail)",
+      feature: "Review before it acts",
+      traditional: "Runs to completion, no way to pause",
+      seer: "Review and approve before any action is taken",
       seerWins: true
     },
     {
-      feature: "Reliability",
-      traditional: "Stateless or manual",
-      seer: "Built-in persistence and resumability",
+      feature: "Connect your existing tools",
+      traditional: "Generic connectors, limited context",
+      seer: "Deep integrations with Gmail, Sheets, Slack, and more",
       seerWins: true
     },
     {
-      feature: "Execution Transparency",
-      traditional: "Basic logs",
-      seer: "Detailed tracing & execution history",
+      feature: "Control your costs",
+      traditional: "No spending limits — surprise bills happen",
+      seer: "Set a budget cap. Seer stops before you overspend.",
       seerWins: true
     },
     {
-      feature: "Self-Hostable",
-      traditional: "Cloud-only",
-      seer: "Self-hostable or cloud",
+      feature: "Try it safely",
+      traditional: "Needs write access to your accounts upfront",
+      seer: "Starts read-only. You grant write access when ready.",
       seerWins: true
     },
     {
-      feature: "Read-Only First",
-      traditional: "Write permissions required",
-      seer: "Read-only scope first, safe testing",
-      seerWins: true
-    },
-    {
-      feature: "Human Oversight",
-      traditional: "Run to completion only",
-      seer: "Human-in-the-loop, interrupt and resume",
-      seerWins: true
-    },
-    {
-      feature: "Cost Governance",
-      traditional: "No built-in spend caps",
-      seer: "Built-in cost controls and budget limits",
+      feature: "Handle errors gracefully",
+      traditional: "Fails silently or crashes",
+      seer: "Pauses, tells you what went wrong, lets you fix and resume",
       seerWins: true
     }
   ];
@@ -62,9 +50,9 @@ const HomeComparisonTable = () => {
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">Seer vs. Other Workflow Platforms</h2>
+          <h2 className="text-5xl font-bold mb-4">Why Teams Switch to Seer</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Built for AI workflows with oversight and cost governance
+            See how Seer stacks up against the tools you've tried before.
           </p>
         </div>
 
@@ -72,14 +60,14 @@ const HomeComparisonTable = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-border">
-                <th className="text-left p-4 font-semibold text-lg">Feature</th>
-                <th className="text-left p-4 font-semibold text-lg">Traditional Platforms</th>
-                <th className="text-left p-4 font-semibold text-lg bg-secondary/30">Seer</th>
+                <th className="text-left p-4 font-semibold text-lg">What You Need</th>
+                <th className="text-left p-4 font-semibold text-lg">Most Automation Tools</th>
+                <th className="text-left p-4 font-semibold text-lg bg-foreground/5">Seer</th>
               </tr>
             </thead>
             <tbody>
               {comparisons.map((row, index) => (
-                <tr key={index} className="border-b border-border hover:bg-secondary/10 transition-colors">
+                <tr key={index} className="border-b border-border hover:bg-foreground/[0.03] transition-colors">
                   <td className="p-4 font-semibold">{row.feature}</td>
                   <td className="p-4 text-muted-foreground">
                     <div className="flex items-start gap-2">
@@ -87,7 +75,7 @@ const HomeComparisonTable = () => {
                       <span>{row.traditional}</span>
                     </div>
                   </td>
-                  <td className="p-4 bg-secondary/10">
+                  <td className="p-4 bg-foreground/[0.02]">
                     <div className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-success mt-1 flex-shrink-0" />
                       <span className="font-medium">{row.seer}</span>

@@ -37,7 +37,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
   };
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all duration-200">
+    <Card className="overflow-hidden hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 border-border/50">
       <CardHeader>
         <div className="flex items-start justify-between gap-2 mb-2">
           <CardTitle className="text-2xl">{video.title}</CardTitle>
@@ -59,7 +59,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
               />
               {/* Play button overlay */}
               <div
-                className="absolute inset-0 flex items-center justify-center bg-black/40 cursor-pointer group"
+                className="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer group"
                 onClick={handlePlayClick}
                 onKeyDown={handleKeyDown}
                 role="button"

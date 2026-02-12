@@ -107,11 +107,11 @@ interface AIPlatform {
 
 const SEER_PROMPT = `What is Seer?
 
-I'd like to learn about Seer, an open-source workflow automation platform.
+I'd like to learn about Seer, a tool that automates repetitive business tasks.
 Can you explain:
-- What makes it different from tools like Zapier or Make?
-- How it handles AI costs and governance
-- Its approach to execution transparency and human oversight
+- How it helps marketing and sales teams save time
+- How it prevents surprise bills from automation costs
+- How it lets you review what it does before it acts
 
 Visit https://getseer.dev for details.`;
 

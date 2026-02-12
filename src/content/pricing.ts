@@ -1,48 +1,47 @@
-export type SubscriptionTier = "pro" | "pro_plus";
+export const PLAN = {
+  name: "Pro",
+  price: 60,
+  description: "Everything you need to automate your daily work",
+  features: [
+    "Unlimited workflows",
+    "1 million runs per month",
+    "$20 in LLM credits included (refreshes every 6 hours)",
+    "GPT-5, Gemini, and Kimi K2.5 models",
+    "Per-workflow budget caps — Seer stops before you overspend",
+    "1-minute polling on triggers",
+    "Run from Claude via MCP",
+    "14-day free trial",
+  ],
+};
 
-export interface PricingTier {
-  tier: SubscriptionTier;
-  name: string;
-  description: string;
-  monthly: number;
-  annual: number;
-  features: string[];
-  isEarlyAdopter?: boolean;
-}
+export const SELF_HOSTED = {
+  name: "Self-Hosted",
+  price: 0,
+  description: "Run Seer on your own infrastructure",
+  features: [
+    "Unlimited everything",
+    "Bring your own API keys",
+    "Use any model (OpenAI, Anthropic, Ollama, etc.)",
+    "Full source code on GitHub",
+    "Community support",
+  ],
+  cta: { label: "View on GitHub", url: "https://github.com/seer-engg/seer" },
+};
 
-export const PRICING_TIERS: PricingTier[] = [
-  {
-    tier: "pro",
-    name: "Pro",
-    description: "MaxCap protection: sleep well, spend smart",
-    monthly: 39,
-    annual: 390,
-    features: [
-      "MaxCap: set spending limits, prevent runaway costs",
-      "Unlimited workflows with real-time cost tracking",
-      "1M workflow-runs/month",
-      "14-day trial (credit card required)",
-      "Cancel anytime",
-      "1min polling frequency",
-    ],
-  },
-  {
-    tier: "pro_plus",
-    name: "Pro+",
-    description: "For teams with advanced needs",
-    monthly: 60,
-    annual: 600,
-    features: [
-      "Everything in Pro",
-      "User management & RBAC",
-      "SSO",
-      "Priority support",
-    ],
-  },
-];
+export const ENTERPRISE = {
+  name: "Enterprise",
+  description: "For teams that need more",
+  features: [
+    "Single sign-on (SSO)",
+    "Custom integrations",
+    "Dedicated support & SLA",
+    "Volume pricing",
+  ],
+  cta: { label: "Talk to Us", url: "mailto:akshay@getseer.dev" },
+};
 
-export const ANNUAL_SAVINGS_PERCENTAGE = 17;
-
-// Early adopter pricing - first 50 users get $29/month locked-in
-export const EARLY_ADOPTER_PRICE = 29;
-export const EARLY_ADOPTER_LIMIT = 50;
+export const HUMAN_COST = {
+  role: "Marketing Assistant",
+  low: 2000,
+  high: 8000,
+};

@@ -86,9 +86,9 @@ const Demo = () => {
       <main className="container mx-auto px-6 pt-32 pb-20">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <h1 className="text-5xl font-bold text-foreground mb-4">Book a demo</h1>
+            <h1 className="text-5xl font-bold text-foreground mb-4">See Seer in Action</h1>
             <p className="text-xl text-muted-foreground">
-              Leave your details and we’ll email you to set up a quick walkthrough.
+              Leave your details and we'll set up a 15-minute walkthrough tailored to your business.
             </p>
           </div>
 
