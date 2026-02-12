@@ -70,7 +70,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - LLM usage gates to manage credit consumption
-- Google Analytics 4 integration for docs.getseer.dev with custom event tracking
+- Google Analytics 4 integration for deepwiki.com/seer-engg/seer with custom event tracking
 - Anniversary billing cycle support
 - Automatic frontend opening in development mode
 

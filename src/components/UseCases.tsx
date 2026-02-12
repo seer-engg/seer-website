@@ -62,7 +62,7 @@ const UseCases = () => {
             return (
               <div
                 key={useCase.title}
-                className={`p-8 border rounded-lg bg-card hover:shadow-lg transition-all duration-200 ${useCase.borderColor}`}
+                className={`p-8 border rounded-lg bg-card hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 ${useCase.borderColor}`}
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center ${useCase.bgColor}`}>

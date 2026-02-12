@@ -11,49 +11,53 @@ const Footer = () => {
           <div>
             <h3 className="font-mono font-semibold text-lg mb-2">Seer</h3>
             <p className="text-sm text-muted-foreground max-w-md">
-              Workflow automation with oversight and cost governance.
-              <br />
-              Built for skeptics · Open Source
+              Automate the busywork. Keep the control.
             </p>
           </div>
 
           {/* Right Column - Navigation Links */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <h4 className="font-mono font-medium text-sm mb-3">Product</h4>
               <div className="space-y-2">
                 <Link
+                  to="/pricing"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Pricing
+                </Link>
+                <Link
                   to="/comparisons"
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  App Comparisons
+                  Comparisons
                 </Link>
-                <a
-                  href="https://docs.getseer.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
-                >
-                  Documentation
-                  <ExternalLink className="w-3 h-3" />
-                </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-mono font-medium text-sm mb-3">Legal</h4>
+              <h4 className="font-mono font-medium text-sm mb-3">Resources</h4>
               <div className="space-y-2">
+                <a
+                  href="https://deepwiki.com/seer-engg/seer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  Docs
+                  <ExternalLink className="w-3 h-3" />
+                </a>
                 <Link
-                  to="/privacy"
+                  to="/changelog"
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Privacy Policy
+                  Changelog
                 </Link>
                 <Link
-                  to="/terms"
+                  to="/blogs"
                   className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Terms of Service
+                  Blog
                 </Link>
               </div>
             </div>
@@ -79,6 +83,33 @@ const Footer = () => {
                   Forum
                   <ExternalLink className="w-3 h-3" />
                 </a>
+                <a
+                  href="https://github.com/seer-engg/seer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+                >
+                  GitHub
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-mono font-medium text-sm mb-3">Legal</h4>
+              <div className="space-y-2">
+                <Link
+                  to="/privacy"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms"
+                  className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Terms of Service
+                </Link>
               </div>
             </div>
           </div>
@@ -87,10 +118,10 @@ const Footer = () => {
         {/* Ask AI Section */}
         <AskAI />
 
-        {/* Bottom Copyright with Theme Toggle */}
+        {/* Bottom Copyright */}
         <div className="mt-4 flex items-center justify-center gap-4">
           <p className="text-xs text-muted-foreground text-center">
-            © {new Date().getFullYear()} X26, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} X26, Inc. All rights reserved.
           </p>
         </div>
       </div>

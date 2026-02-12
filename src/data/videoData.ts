@@ -6,33 +6,34 @@ export interface Video {
   category: string;        // "Getting Started", "Email Automation", etc.
 }
 
+export const featuredVideo: Video = {
+  id: "ppLQWPAlKLA",
+  title: "Sort and Route Leads Automatically",
+  description: "Incoming leads get classified and routed to the right person. No manual sorting. No expensive setup experiments.",
+  duration: "4:48",
+  category: "Lead Management"
+};
+
 export const productDemoVideos: Video[] = [
   {
-    id: "cmQvmla8sl0",
-    title: "Getting Started with Seer",
-    description: "Learn how to build your first AI workflow in minutes without writing any code. Perfect for marketing teams new to automation.",
-    duration: "3:42",
-    category: "Getting Started"
-  },
-  {
     id: "Q1wPRnTGf0w",
-    title: "Email Automation Made Simple",
-    description: "See how Seer automatically triages your inbox and prioritizes what matters most to your marketing campaigns.",
+    title: "Email Inbox Triage — Automated",
+    description: "Your inbox gets triaged automatically. Important emails float to the top. You save 30 minutes every morning.",
     duration: "4:15",
     category: "Email Automation"
   },
   {
-    id: "HbZD8aZRiaA",
-    title: "Content Creation Workflows",
-    description: "Watch how marketing teams use Seer to draft LinkedIn posts, blog content, and social media updates on autopilot.",
-    duration: "5:23",
-    category: "Content Creation"
+    id: "cmQvmla8sl0",
+    title: "Set Up Your First Automation in 3 Minutes",
+    description: "Watch us go from zero to a running automation. No code, no configuration files, just point and click.",
+    duration: "3:42",
+    category: "Getting Started"
   },
   {
-    id: "ppLQWPAlKLA",
-    title: "Lead Management & Routing",
-    description: "Discover how to classify leads, route inquiries, and automate follow-ups without expensive agent setup costs.",
-    duration: "4:48",
-    category: "Lead Management"
+    id: "HbZD8aZRiaA",
+    title: "LinkedIn Posts on Autopilot",
+    description: "Seer drafts your LinkedIn posts from your notes and drops them in Google Docs for review. One less thing to stare at.",
+    duration: "5:23",
+    category: "Content Creation"
   }
 ];

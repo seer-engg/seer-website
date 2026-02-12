@@ -6,10 +6,10 @@ import { comparisons } from "@/content/comparisons/data";
 
 const ComparisonsIndex = () => {
   useEffect(() => {
-    document.title = "App Comparisons | Seer";
-    
+    document.title = "How Seer Compares | Seer";
+
     const metaDescription = document.querySelector('meta[name="description"]');
-    const description = "Compare automation and workflow tools side-by-side. Find the best solution for your needs with detailed comparisons of pricing, features, and capabilities.";
+    const description = "See how Seer stacks up against other automation tools on price, features, and ease of use.";
     
     if (metaDescription) {
       metaDescription.setAttribute("content", description);
@@ -29,12 +29,11 @@ const ComparisonsIndex = () => {
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              App Comparisons
+              How Seer Compares
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Compare automation and workflow tools side-by-side. Find the best
-              solution for your needs with detailed comparisons of pricing,
-              features, and capabilities.
+              See how Seer stacks up against other automation tools on price,
+              features, and ease of use.
             </p>
           </div>
         </section>
