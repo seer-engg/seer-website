@@ -1,25 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
-import { PRICING_TIERS, ANNUAL_SAVINGS_PERCENTAGE, type PricingTier } from "@/content/pricing";
+import { PRICING_TIERS, ANNUAL_SAVINGS_PERCENTAGE, EARLY_ADOPTER_PRICE, EARLY_ADOPTER_LIMIT, type PricingTier } from "@/content/pricing";
 
 const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly");
+  const [earlyAdoptersRemaining, setEarlyAdoptersRemaining] = useState<number | null>(null);
 
-  const handleFreeTrial = () => {
+  useEffect(() => {
+    // In production, fetch from API. For now, assume spots available.
+    // This would call: /api/subscriptions/early-adopter-count
+    setEarlyAdoptersRemaining(EARLY_ADOPTER_LIMIT);
+  }, []);
+
+  const handleSignUp = () => {
     window.location.href = "https://app.getseer.dev";
-  };
-
-  const handleSignUp = (tier: string) => {
-    if (tier === "free") {
-      handleFreeTrial();
-    } else {
-      window.location.href = "https://app.getseer.dev";
-    }
   };
 
   return (
@@ -32,11 +31,16 @@ const Pricing = () => {
             <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
               <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">Pricing</p>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                Simple, transparent pricing
+                Set it. Forget it. Never get burned.
               </h1>
               <p className="text-lg text-muted-foreground">
-                Choose the perfect plan for your workflow automation needs. Always free to get started.
+                AI workflows with MaxCap protection. One $3K surprise bill is all it takes—don't let it be yours.
               </p>
+              {earlyAdoptersRemaining !== null && earlyAdoptersRemaining > 0 && (
+                <Badge variant="secondary" className="mt-2">
+                  Early Adopter: First {EARLY_ADOPTER_LIMIT} users get ${EARLY_ADOPTER_PRICE}/month forever
+                </Badge>
+              )}
             </div>
 
             {/* Billing Toggle */}
@@ -77,7 +81,8 @@ const Pricing = () => {
                   key={tier.tier}
                   tier={tier}
                   billingPeriod={billingPeriod}
-                  onSignUp={() => handleSignUp(tier.tier)}
+                  onSignUp={handleSignUp}
+                  showEarlyAdopter={tier.tier === "pro" && earlyAdoptersRemaining !== null && earlyAdoptersRemaining > 0}
                 />
               ))}
             </div>
@@ -90,27 +95,33 @@ const Pricing = () => {
             <h2 className="text-2xl font-bold mb-8 text-center">Frequently asked questions</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="font-semibold mb-2">Can I switch plans anytime?</h3>
+                <h3 className="font-semibold mb-2">Why do you require a credit card for the trial?</h3>
                 <p className="text-muted-foreground">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.
+                  Seer is built for serious automation. A card on file ensures zero workflow interruptions and prevents limits during critical runs. Plus, you get MaxCap protection from day one—no surprise bills, ever. You won't be charged during the 14-day trial.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Is there a free trial?</h3>
+                <h3 className="font-semibold mb-2">What happens after the trial?</h3>
                 <p className="text-muted-foreground">
-                  The Free plan gives you access to all core features with limited monthly runs. Start with Free and upgrade whenever you need more.
+                  Your subscription auto-renews at the monthly rate. Early adopters (first {EARLY_ADOPTER_LIMIT} users) get ${EARLY_ADOPTER_PRICE}/month locked-in forever. Standard pricing is $49/month. Cancel anytime before trial ends—no questions asked.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Do you offer custom enterprise plans?</h3>
+                <h3 className="font-semibold mb-2">What's MaxCap and why do I need it?</h3>
                 <p className="text-muted-foreground">
-                  Yes, we provide custom pricing for large teams and enterprise needs. Contact our sales team to discuss your requirements.
+                  MaxCap is your safety net. Set a spending limit (e.g., $100/month), and Seer automatically pauses workflows before you hit it. No more waking up to $3K bills from runaway loops or API cost spikes. You control the budget; we enforce it.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">Can I cancel anytime?</h3>
+                <p className="text-muted-foreground">
+                  Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">What payment methods do you accept?</h3>
                 <p className="text-muted-foreground">
-                  We accept all major credit cards and process payments securely through Stripe.
+                  We accept all major credit cards and process payments securely through Stripe. All transactions are PCI-DSS compliant.
                 </p>
               </div>
             </div>
@@ -126,12 +137,12 @@ interface PricingCardProps {
   tier: PricingTier;
   billingPeriod: "monthly" | "annual";
   onSignUp: () => void;
+  showEarlyAdopter?: boolean;
 }
 
-function PricingCard({ tier, billingPeriod, onSignUp }: PricingCardProps) {
-  const displayPrice = billingPeriod === "monthly" ? tier.monthly : Math.floor(tier.annual / 12);
-  const periodLabel = billingPeriod === "monthly" ? "month" : "year";
-  const isFreePlan = tier.tier === "free";
+function PricingCard({ tier, billingPeriod, onSignUp, showEarlyAdopter }: PricingCardProps) {
+  const basePrice = billingPeriod === "monthly" ? tier.monthly : Math.floor(tier.annual / 12);
+  const displayPrice = showEarlyAdopter && tier.tier === "pro" ? EARLY_ADOPTER_PRICE : basePrice;
 
   return (
     <Card
@@ -140,6 +151,11 @@ function PricingCard({ tier, billingPeriod, onSignUp }: PricingCardProps) {
       }`}
     >
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-seer via-purple-500 to-seer opacity-70" />
+      {showEarlyAdopter && (
+        <Badge className="absolute top-4 right-4 bg-seer text-white border-seer">
+          Early Adopter
+        </Badge>
+      )}
       <CardHeader className="space-y-3 pb-4">
         <div className="space-y-1">
           <CardTitle className="text-xl">{tier.name}</CardTitle>
@@ -147,18 +163,26 @@ function PricingCard({ tier, billingPeriod, onSignUp }: PricingCardProps) {
         </div>
         <div className="space-y-1">
           <div className="text-3xl font-bold">
-            {isFreePlan ? "Free" : `$${displayPrice}`}
+            ${displayPrice}
+            {showEarlyAdopter && basePrice !== displayPrice && (
+              <span className="text-lg text-muted-foreground line-through ml-2">
+                ${basePrice}
+              </span>
+            )}
           </div>
-          {!isFreePlan && (
-            <div className="text-xs text-muted-foreground">
-              {billingPeriod === "annual" ? "per month (billed annually)" : "per month"}
-              {billingPeriod === "annual" && (
-                <div className="mt-1">
-                  Save ${(tier.monthly - displayPrice) * 12}/year
-                </div>
-              )}
-            </div>
-          )}
+          <div className="text-xs text-muted-foreground">
+            {billingPeriod === "annual" ? "per month (billed annually)" : "per month"}
+            {showEarlyAdopter && (
+              <div className="mt-1 text-seer font-semibold">
+                Locked-in forever for first {EARLY_ADOPTER_LIMIT} users
+              </div>
+            )}
+            {billingPeriod === "annual" && !showEarlyAdopter && (
+              <div className="mt-1">
+                Save ${(tier.monthly - displayPrice) * 12}/year
+              </div>
+            )}
+          </div>
         </div>
       </CardHeader>
 

@@ -95,12 +95,29 @@ Don't:
 - You're responsible for uptime, backups, security
 - We provide the code and updates, you handle infrastructure
 
-## 9. Pricing Changes
+## 9. Pricing & Subscriptions
 
-Right now, cloud is free. When we add paid tiers:
-- We'll give you advance notice (at least 30 days)
-- Your existing workflows won't break
-- We'll grandfather early users where reasonable
+**14-Day Trial:**
+- All new users start with a 14-day free trial
+- Credit card required to start trial
+- No charges during the trial period
+- Auto-renews to paid subscription after 14 days unless canceled
+
+**Subscription Pricing:**
+- Standard pricing: $49/month
+- Early adopter pricing: First 50 users get $29/month locked-in forever
+- Annual billing available with discount
+- Cancel anytime - access continues until end of billing period
+
+**What Happens After Trial:**
+- If you don't cancel, subscription auto-renews at your monthly rate
+- Early adopters keep their $29/month rate permanently
+- You can cancel before trial ends to avoid charges
+
+**Grandfather Clause:**
+- Users who signed up before February 1, 2026 are grandfathered with free access
+- Early adopter pricing is locked-in for the first 50 subscribers
+- We'll notify users of any future pricing changes with 30 days notice
 
 ## 10. Support & Warranties
 
