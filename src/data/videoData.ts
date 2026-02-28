@@ -1,39 +1,51 @@
 export interface Video {
-  id: string;              // YouTube video ID
-  title: string;           // Marketing-focused title
-  description: string;     // Brief description (1-2 sentences)
-  duration: string;        // "3:45" format
-  category: string;        // "Getting Started", "Email Automation", etc.
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  category: string;
+  publishDate: string;
 }
-
-export const featuredVideo: Video = {
-  id: "ppLQWPAlKLA",
-  title: "Sort and Route Leads Automatically",
-  description: "Incoming leads get classified and routed to the right person. No manual sorting. No expensive setup experiments.",
-  duration: "4:48",
-  category: "Lead Management"
-};
 
 export const productDemoVideos: Video[] = [
   {
-    id: "Q1wPRnTGf0w",
-    title: "Email Inbox Triage — Automated",
-    description: "Your inbox gets triaged automatically. Important emails float to the top. You save 30 minutes every morning.",
-    duration: "4:15",
-    category: "Email Automation"
+    id: "TLeQfdlY9l4",
+    title: "Automate Client FAQs with a Slack AI Agent",
+    description: "Build a Slack bot that answers client questions from your knowledge base — and DMs you when it can't. Setup takes 30 minutes.",
+    duration: "4:20",
+    category: "Slack",
+    publishDate: "2026-02-21",
   },
   {
-    id: "cmQvmla8sl0",
-    title: "Set Up Your First Automation in 3 Minutes",
-    description: "Watch us go from zero to a running automation. No code, no configuration files, just point and click.",
-    duration: "3:42",
-    category: "Getting Started"
+    id: "ppLQWPAlKLA",
+    title: "AI Email Agent for a Rug Store in 3 Minutes",
+    description: "Build and deploy a customer support email agent — no code, no surprise bill. Auto-answers product questions, forwards sales leads.",
+    duration: "3:22",
+    category: "Email",
+    publishDate: "2026-02-11",
   },
   {
     id: "HbZD8aZRiaA",
-    title: "LinkedIn Posts on Autopilot",
-    description: "Seer drafts your LinkedIn posts from your notes and drops them in Google Docs for review. One less thing to stare at.",
-    duration: "5:23",
-    category: "Content Creation"
-  }
+    title: "Sort Your Inbox in 90 Seconds with Claude + Seer",
+    description: "Build an AI agent that reads your last 10 emails, categorizes them by importance, and flags the ones that matter — all from Claude's chat window.",
+    duration: "5:25",
+    category: "Email",
+    publishDate: "2026-02-06",
+  },
+  {
+    id: "Q1wPRnTGf0w",
+    title: "Self-Hosted Welcome Emails with Supabase & Seer",
+    description: "Automate welcome emails for new users by integrating Supabase with Seer. AI-generated drafts with human review before sending.",
+    duration: "7:13",
+    category: "Integrations",
+    publishDate: "2026-01-14",
+  },
+  {
+    id: "cmQvmla8sl0",
+    title: "AI Workflows with Read-Only OAuth Scopes",
+    description: "Most platforms ask for full Gmail access when they only need to read. Seer implements read-only OAuth scopes by default.",
+    duration: "2:49",
+    category: "Security",
+    publishDate: "2026-01-02",
+  },
 ];
