@@ -11,7 +11,7 @@ const ProductDemos = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4">Watch It Work</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real demos. Real tasks. No fluff.
+            Real workflows. No fluff.
           </p>
         </div>
 
