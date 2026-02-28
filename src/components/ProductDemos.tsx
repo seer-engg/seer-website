@@ -5,13 +5,13 @@ const ProductDemos = () => {
   const [featured, ...rest] = productDemoVideos;
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section id="demos" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4">See Seer in Action</h2>
+          <h2 className="text-5xl font-bold mb-4">Watch It Work</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real workflows. Real demos. No fluff.
+            Real workflows. No fluff.
           </p>
         </div>
 
