@@ -165,6 +165,13 @@
 
   <!-- Blog Pages -->
   <url>
+    <loc>https://getseer.dev/blogs/automate-slack-faq-agent</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://getseer.dev/blogs/true-cost-of-ai-automation</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>monthly</changefreq>

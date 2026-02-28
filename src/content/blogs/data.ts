@@ -10,6 +10,31 @@ import type { BlogData } from "../blogs-metadata";
 
 export const blogs: BlogData[] = [
   {
+    slug: "automate-slack-faq-agent",
+    title: "How Marcus Stopped Answering the Same Slack Questions Every Morning",
+    description: "Build a Slack AI agent that answers client FAQs from your knowledge base — and DMs you when it can't. Setup takes one afternoon. Most consultants reclaim 30–60 minutes a day.",
+    author: "Akshay",
+    publishDate: "2026-02-27",
+    readTime: 7,
+    contentPath: "automate-slack-faq-agent",
+    seo: {
+      title: "Automate Client FAQ Responses with a Slack AI Agent | Seer",
+      description: "Stop answering the same Slack questions every day. Build a Slack bot that searches your knowledge base and replies automatically — with a smart fallback that DMs you when it can't answer.",
+      keywords: [
+        "slack faq bot",
+        "automate slack responses",
+        "slack ai agent",
+        "knowledge base chatbot",
+        "automate client questions",
+        "consultant automation",
+        "slack workflow automation",
+        "seer knowledge base",
+        "faq automation",
+        "solopreneur tools",
+      ],
+    },
+  },
+  {
     slug: "true-cost-of-ai-automation",
     title: "The True Cost of AI Workflow Automation: Zapier, Make, Lindy, and Seer — With Real Math",
     description: "I ran the same workflow on four platforms. The most expensive bill: $212. The cheapest: $39. A brutally honest breakdown of per-task, per-operation, per-credit, and per-run billing models with side-by-side cost tables.",
