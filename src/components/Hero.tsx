@@ -3,10 +3,11 @@ import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
-import { featuredVideo } from "@/data/videoData";
+import { productDemoVideos } from "@/data/videoData";
 
 const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const featuredVideo = productDemoVideos[0];
 
   const thumbnailUrl = `https://i.ytimg.com/vi/${featuredVideo.id}/maxresdefault.jpg`;
   const embedUrl = `https://www.youtube.com/embed/${featuredVideo.id}?autoplay=1`;
